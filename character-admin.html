@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10191d">
+  <title>角色管理台 · 雨夜霓虹</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./character-admin.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="./character-admin.html" aria-label="角色管理台首页"><span class="brand-mark" aria-hidden="true">雨</span><span><span class="eyebrow">NEON CROSSING / CHARACTER ARCHIVE</span><strong>雨夜霓虹 <span>/</span> 角色管理台</strong></span></a>
+    <div class="header-actions"><span class="live-label"><i></i> 城市原始模型</span><a class="city-link" href="./index.html">返回城市 <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <div class="workspace">
+    <aside class="catalog-panel" aria-label="角色分组目录">
+      <div class="panel-title"><div><span class="eyebrow">COLLECTIONS</span><h2>角色与载具</h2></div><span class="catalog-total" id="catalog-total">—</span></div>
+      <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="catalog-search" placeholder="搜索角色、飞行器、列车…" aria-label="搜索角色分组和变体" autocomplete="off"><kbd>/</kbd></label>
+      <div class="category-list" id="category-list" aria-label="角色分类"></div>
+      <div class="catalog-caption"><span id="catalog-count">正在读取目录…</span><span>按造型归组</span></div>
+      <nav class="group-list" id="group-list" aria-label="角色分组"></nav>
+      <div class="catalog-footer"><span class="tiny-dot"></span><p>同类角色与载具一起看<br><span>每个变体均可单独放大检查</span></p></div>
+    </aside>
+
+    <main class="main-panel" id="main-panel">
+      <div class="group-heading"><div><div class="heading-kicker"><span class="eyebrow" id="group-category">CHARACTER COLLECTION</span><span id="group-code">—</span></div><h1 id="group-name">正在载入角色档案</h1><p id="group-description">读取城市中的角色、运动载具与造型变体。</p></div><div class="group-counter"><strong id="variant-count">—</strong><span>同组变体</span></div></div>
+      <section class="inspection-tools" aria-label="模型观察工具">
+        <div class="toolbar-row"><div class="segmented view-switch" role="group" aria-label="观察角度"><button data-view="iso" class="is-active" aria-pressed="true">3D</button><button data-view="front" aria-pressed="false">正面</button><button data-view="side" aria-pressed="false">侧面</button><button data-view="back" aria-pressed="false">背面</button><button data-view="top" aria-pressed="false">俯视</button></div><div class="toolbar-right"><button id="linked-cameras" class="tool-button is-active" aria-pressed="true" title="对当前并列模型使用相同观察角度">同步镜头</button><div class="segmented layout-switch" role="group" aria-label="每页显示数量"><button data-columns="2" aria-pressed="false">2 格</button><button data-columns="4" class="is-active" aria-pressed="true">4 格</button></div></div></div>
+        <div class="toolbar-row secondary-tools"><div class="tool-cluster"><button id="wireframe" class="tool-button" aria-pressed="false">线框</button><button id="clay-mode" class="tool-button" aria-pressed="false">白模</button><label class="light-control">灯光<select id="light-mode" aria-label="观察灯光"><option value="studio">明亮棚拍</option><option value="night">雨夜霓虹</option></select></label></div><div class="tool-cluster"><button id="auto-rotate" class="tool-button" aria-pressed="false">自动旋转</button><button id="play-pause" class="tool-button" aria-pressed="false">播放动作</button><button id="reset-camera" class="tool-button" title="恢复默认观察角度">重置</button><button id="capture" class="tool-button" title="保存当前并列模型截图">截图 ↧</button></div></div>
+      </section>
+      <div class="board-meta"><span id="board-summary">同组并列观察</span><span>拖动旋转 <b>·</b> 滚轮缩放 <b>·</b> 右键平移</span></div>
+      <div class="comparison-board" id="comparison-board" data-layout="4" aria-label="角色三维并列观察窗口"></div>
+      <div class="state-panel" id="state-panel" role="status"><span class="loading-ring" aria-hidden="true"></span><h2 id="state-title">正在载入城市角色</h2><p id="state-message">首次载入需要创建原始模型，请稍候。</p><button id="retry" class="primary-button" hidden>重新载入</button><button id="clear-search" class="primary-button" hidden>清除筛选</button></div>
+      <div class="pagination" id="pagination" hidden><span id="page-summary"></span><div><button id="previous-page" aria-label="上一页变体">← 上一页</button><span id="page-count"></span><button id="next-page" aria-label="下一页变体">下一页 →</button><button id="leave-focus" class="is-accent" hidden>返回并列</button></div></div>
+      <p class="main-footnote">选中任意模型卡片，在右侧记录审阅结果。模型与城市使用同一份造型数据。</p>
+    </main>
+
+    <aside class="inspector-panel" aria-label="角色详情与审阅">
+      <div class="panel-title"><div><span class="eyebrow">INSPECTION</span><h2>当前模型</h2></div><span class="local-badge">本地记录</span></div>
+      <div id="inspector-empty" class="inspector-empty">载入后选择一个角色<br>查看细节并记录修改意见。</div>
+      <div id="inspector-content" hidden>
+        <div class="selected-heading"><span id="selected-number" class="eyebrow"></span><h3 id="selected-name"></h3><code id="selected-id"></code></div>
+        <div class="variant-tags" id="selected-tags"></div>
+        <div class="metric-grid"><div><span>网格</span><strong id="stat-meshes">—</strong></div><div><span>三角面</span><strong id="stat-triangles">—</strong></div></div>
+        <dl class="model-details"><div><dt>尺寸</dt><dd id="stat-dimensions">—</dd></div><div><dt>来源</dt><dd id="selected-source"></dd></div></dl>
+        <section class="review-section" aria-labelledby="review-title"><div class="section-heading"><h3 id="review-title">审阅状态</h3><span id="review-saved">自动保存</span></div><div class="review-options" role="group" aria-label="当前角色审阅状态"><button data-review="pending" aria-pressed="true"><span></span>待审阅</button><button data-review="improve" aria-pressed="false"><span></span>待优化</button><button data-review="approved" aria-pressed="false"><span></span>已通过</button></div><label for="review-notes" class="notes-label">修改备注</label><textarea id="review-notes" rows="6" maxlength="3000" placeholder="例如：伞柄与手掌未贴合；面部细节不足；肩部比例偏宽…"></textarea><div class="notes-bottom"><span>仅保存在此浏览器</span><span id="note-length">0 / 3000</span></div></section>
+        <section class="inspection-tip"><span class="eyebrow">LOOK CLOSER</span><p>切换白模检查体块，使用线框检查几何；正面、侧面和背面观察比例与穿插。</p></section>
+      </div>
+    </aside>
+  </div>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <noscript><div class="noscript">请启用 JavaScript，以载入三维角色管理台。</div></noscript>
+  <script type="module" src="./character-admin.js"></script>
+</body>
+</html>

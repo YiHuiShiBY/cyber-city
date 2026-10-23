@@ -1,0 +1,1184 @@
+{
+  "id": "cruiser",
+  "generator": "Blender 5.2.2 LTS",
+  "axis": "Three.js Y-up +Z nose (airship long axis X)",
+  "exportScale": [
+    1,
+    1,
+    1
+  ],
+  "layers": {
+    "body": {
+      "vertices": 18416,
+      "triangles": 12986
+    },
+    "glass": {
+      "vertices": 496,
+      "triangles": 472
+    },
+    "lights": {
+      "vertices": 1416,
+      "triangles": 1212
+    }
+  },
+  "bounds": {
+    "min": [
+      -6.066961765289307,
+      -0.4300000071525574,
+      -3.9000000953674316
+    ],
+    "max": [
+      6.066961765289307,
+      1.0785115957260132,
+      4.230000019073486
+    ]
+  },
+  "objects": [
+    {
+      "name": "Cruiser_variable_section_fuselage",
+      "triangles": 508,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_armoured_underside",
+      "triangles": 316,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_cockpit",
+      "triangles": 364,
+      "layer": "glass"
+    },
+    {
+      "name": "Cruiser_canopy_center_rear",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_canopy_center_front",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Port_canopy_sill",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Port_windscreen_pillar",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Port_canopy_header",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Port_rear_canopy_post",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Port_cambered_wing",
+      "triangles": 234,
+      "layer": "body"
+    },
+    {
+      "name": "Port_inner_wing_armour",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "Port_outer_wing_armour",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Port_recessed_cooling_well",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Port_inset_flow_vane_1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Port_inset_flow_vane_2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Port_inset_flow_vane_3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Port_inset_flow_vane_4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Port_inset_flow_vane_5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_identity_NX-07",
+      "triangles": 32,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_caution_stripe_1",
+      "triangles": 2,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_caution_stripe_2",
+      "triangles": 2,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_caution_stripe_3",
+      "triangles": 2,
+      "layer": "body"
+    },
+    {
+      "name": "Port_separate_outer_elevon",
+      "triangles": 88,
+      "layer": "body"
+    },
+    {
+      "name": "Port_separate_inner_elevon",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_leading_edge_inlay",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "Port_propulsion_core",
+      "triangles": 224,
+      "layer": "body"
+    },
+    {
+      "name": "Port_intake_shoulder",
+      "triangles": 224,
+      "layer": "body"
+    },
+    {
+      "name": "Port_inlet_tunnel",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "Port_inlet_machined_lip",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_hub",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_00",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_01",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_02",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_03",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_04",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_05",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_06",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_07",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_08",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_09",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_compressor_blade_10",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_exhaust_nozzle",
+      "triangles": 224,
+      "layer": "body"
+    },
+    {
+      "name": "Port_exhaust_outer_ring",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "Port_exhaust_energy_ring",
+      "triangles": 336,
+      "layer": "lights"
+    },
+    {
+      "name": "Port_aft_turbine_hub",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_00",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_01",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_02",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_03",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_04",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_05",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_06",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_07",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_aft_turbine_blade_08",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_nozzle_petals_0",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_nozzle_petals_1",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_nozzle_petals_2",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_nozzle_petals_3",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_nozzle_petals_4",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_nozzle_petals_5",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_nozzle_petals_6",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_nozzle_petals_7",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_top_access",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_heat_bed",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_heat_exchanger_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_heat_exchanger_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_heat_exchanger_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_heat_exchanger_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_heat_exchanger_4",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_heat_exchanger_5",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_bolt_-0.17_-2.96",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_bolt_-0.17_-2.96_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_bolt_-0.17_-2.03",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_bolt_-0.17_-2.03_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_bolt_0.17_-2.96",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_bolt_0.17_-2.96_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_bolt_0.17_-2.03",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_engine_bolt_0.17_-2.03_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_canted_tail_fin",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_rudder_seam",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_fin_warning",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_0_-0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_0_-0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_0_0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_0_0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_1_-0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_1_-0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_1_0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_1_0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_2_-0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_2_-0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_2_0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_2_0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_3_-0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_3_-0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_3_0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_hatch_screw_3_0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_hull_nose_armour",
+      "triangles": 104,
+      "layer": "body"
+    },
+    {
+      "name": "Port_forward_hatch_bolt_0.65",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_forward_hatch_bolt_0.65_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_forward_hatch_bolt_1.4",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Port_forward_hatch_bolt_1.4_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Port_wing_navigation_lamp",
+      "triangles": 108,
+      "layer": "lights"
+    },
+    {
+      "name": "Port_engine_status_light",
+      "triangles": 108,
+      "layer": "lights"
+    },
+    {
+      "name": "Starboard_canopy_sill",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_windscreen_pillar",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_canopy_header",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_rear_canopy_post",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_cambered_wing",
+      "triangles": 234,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_inner_wing_armour",
+      "triangles": 194,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_outer_wing_armour",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_recessed_cooling_well",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_inset_flow_vane_1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_inset_flow_vane_2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_inset_flow_vane_3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_inset_flow_vane_4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_inset_flow_vane_5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_identity_NX-07",
+      "triangles": 32,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_caution_stripe_1",
+      "triangles": 2,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_caution_stripe_2",
+      "triangles": 2,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_caution_stripe_3",
+      "triangles": 2,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_separate_outer_elevon",
+      "triangles": 88,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_separate_inner_elevon",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_leading_edge_inlay",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_propulsion_core",
+      "triangles": 224,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_intake_shoulder",
+      "triangles": 224,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_inlet_tunnel",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_inlet_machined_lip",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_hub",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_00",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_01",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_02",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_03",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_04",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_05",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_06",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_07",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_08",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_09",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_compressor_blade_10",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_exhaust_nozzle",
+      "triangles": 224,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_exhaust_outer_ring",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_exhaust_energy_ring",
+      "triangles": 336,
+      "layer": "lights"
+    },
+    {
+      "name": "Starboard_aft_turbine_hub",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_00",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_01",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_02",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_03",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_04",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_05",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_06",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_07",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_aft_turbine_blade_08",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_nozzle_petals_0",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_nozzle_petals_1",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_nozzle_petals_2",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_nozzle_petals_3",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_nozzle_petals_4",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_nozzle_petals_5",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_nozzle_petals_6",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_nozzle_petals_7",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_top_access",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_heat_bed",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_heat_exchanger_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_heat_exchanger_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_heat_exchanger_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_heat_exchanger_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_heat_exchanger_4",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_heat_exchanger_5",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_bolt_-0.17_-2.96",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_bolt_-0.17_-2.96_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_bolt_-0.17_-2.03",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_bolt_-0.17_-2.03_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_bolt_0.17_-2.96",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_bolt_0.17_-2.96_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_bolt_0.17_-2.03",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_engine_bolt_0.17_-2.03_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_canted_tail_fin",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_rudder_seam",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_fin_warning",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_0_-0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_0_-0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_0_0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_0_0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_1_-0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_1_-0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_1_0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_1_0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_2_-0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_2_-0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_2_0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_2_0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_3_-0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_3_-0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_3_0.102",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_hatch_screw_3_0.102_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_hull_nose_armour",
+      "triangles": 104,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_forward_hatch_bolt_0.65",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_forward_hatch_bolt_0.65_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_forward_hatch_bolt_1.4",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_forward_hatch_bolt_1.4_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Starboard_wing_navigation_lamp",
+      "triangles": 108,
+      "layer": "lights"
+    },
+    {
+      "name": "Starboard_engine_status_light",
+      "triangles": 108,
+      "layer": "lights"
+    },
+    {
+      "name": "Cruiser_avionics_gasket",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_lid",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_vent_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_vent_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_vent_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_vent_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_vent_4",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_bolt",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_bolt_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_bolt.001",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_bolt_slot.001",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_bolt.002",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_bolt_slot.002",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_bolt.003",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_avionics_bolt_slot.003",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_sensor_turret",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cruiser_sensor_lens",
+      "triangles": 108,
+      "layer": "glass"
+    },
+    {
+      "name": "Cruiser_sensor_indicator",
+      "triangles": 108,
+      "layer": "lights"
+    }
+  ],
+  "triangles": 14670
+}

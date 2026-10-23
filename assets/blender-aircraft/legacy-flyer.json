@@ -1,0 +1,845 @@
+{
+  "id": "legacy-flyer",
+  "generator": "Blender 5.2.2 LTS",
+  "axis": "Three.js Y-up +Z nose (airship long axis X)",
+  "exportScale": [
+    1,
+    1,
+    1
+  ],
+  "layers": {
+    "body": {
+      "vertices": 14405,
+      "triangles": 10819
+    },
+    "lights": {
+      "vertices": 936,
+      "triangles": 900
+    }
+  },
+  "bounds": {
+    "min": [
+      -0.7745605111122131,
+      -0.1738620549440384,
+      -0.8349999785423279
+    ],
+    "max": [
+      0.7745605111122131,
+      0.3478343188762665,
+      1.2599999904632568
+    ]
+  },
+  "objects": [
+    {
+      "name": "Scout_primary_pressure_hull",
+      "triangles": 460,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_lower_keel",
+      "triangles": 316,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_cockpit_glazing",
+      "triangles": 316,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_canopy_spine",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_canopy_front_spine",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "L_canopy_sill",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "L_canopy_rear_post",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "L_canopy_windscreen_post",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "L_canopy_header",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "L_nose_cheek",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "L_swept_wing",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "L_wing_access_panel",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_separate_flaperon",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_engine_case",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_bellmouth",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_dark_tunnel",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_hub",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_00",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_01",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_02",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_03",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_04",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_05",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_06",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_07",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_compressor_blade_08",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_intake_lip",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_petals",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_shroud",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_inner",
+      "triangles": 288,
+      "layer": "lights"
+    },
+    {
+      "name": "L_exhaust_turbine_hub",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_turbine_blade_00",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_turbine_blade_01",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_turbine_blade_02",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_turbine_blade_03",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_turbine_blade_04",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_turbine_blade_05",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_turbine_blade_06",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_exhaust_turbine_blade_07",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_actuator_0",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_actuator_1",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_actuator_2",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_actuator_3",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_actuator_4",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_actuator_5",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_actuator_6",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_nozzle_actuator_7",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_engine_dorsal_cover",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_hatch",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_cooling_louver_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_cooling_louver_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_cooling_louver_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_cooling_louver_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_screw_-0.49_-0.034",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_screw_-0.49_-0.034_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_screw_-0.49_0.034",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_screw_-0.49_0.034_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_screw_-0.19_-0.034",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_screw_-0.19_-0.034_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_screw_-0.19_0.034",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_cover_screw_-0.19_0.034_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_vertical_stabilizer",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_stabilizer_warning",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_nav_lamp",
+      "triangles": 108,
+      "layer": "lights"
+    },
+    {
+      "name": "L_wing_root_fastener_-0.29",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_wing_root_fastener_-0.29_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_wing_root_fastener_-0.12",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "L_wing_root_fastener_-0.12_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "L_shoulder_grille_bed",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_shoulder_grille_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_shoulder_grille_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_shoulder_grille_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_shoulder_grille_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "L_shoulder_grille_4",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_canopy_sill",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "R_canopy_rear_post",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "R_canopy_windscreen_post",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "R_canopy_header",
+      "triangles": 28,
+      "layer": "body"
+    },
+    {
+      "name": "R_nose_cheek",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "R_swept_wing",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "R_wing_access_panel",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_separate_flaperon",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_engine_case",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_bellmouth",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_dark_tunnel",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_hub",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_00",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_01",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_02",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_03",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_04",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_05",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_06",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_07",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_compressor_blade_08",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_intake_lip",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_petals",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_shroud",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_inner",
+      "triangles": 288,
+      "layer": "lights"
+    },
+    {
+      "name": "R_exhaust_turbine_hub",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_turbine_blade_00",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_turbine_blade_01",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_turbine_blade_02",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_turbine_blade_03",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_turbine_blade_04",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_turbine_blade_05",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_turbine_blade_06",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_exhaust_turbine_blade_07",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_actuator_0",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_actuator_1",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_actuator_2",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_actuator_3",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_actuator_4",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_actuator_5",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_actuator_6",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_nozzle_actuator_7",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_engine_dorsal_cover",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_engine_high_temperature_triangle",
+      "triangles": 1,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_engine_heat_warning_stem",
+      "triangles": 2,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_engine_heat_warning_dot",
+      "triangles": 2,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_hatch",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_cooling_louver_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_cooling_louver_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_cooling_louver_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_cooling_louver_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_screw_-0.49_-0.034",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_screw_-0.49_-0.034_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_screw_-0.49_0.034",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_screw_-0.49_0.034_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_screw_-0.19_-0.034",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_screw_-0.19_-0.034_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_screw_-0.19_0.034",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_cover_screw_-0.19_0.034_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_vertical_stabilizer",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_stabilizer_warning",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_nav_lamp",
+      "triangles": 108,
+      "layer": "lights"
+    },
+    {
+      "name": "R_wing_root_fastener_-0.29",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_wing_root_fastener_-0.29_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_wing_root_fastener_-0.12",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "R_wing_root_fastener_-0.12_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "R_shoulder_grille_bed",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_shoulder_grille_0",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_shoulder_grille_1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_shoulder_grille_2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_shoulder_grille_3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "R_shoulder_grille_4",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_aft_service_deck",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_identity_MK-02",
+      "triangles": 42,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_vent",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_vent.001",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_vent.002",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover_bolt",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover_bolt_slot",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover_bolt.001",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover_bolt_slot.001",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover_bolt.002",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover_bolt_slot.002",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover_bolt.003",
+      "triangles": 20,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_power_cover_bolt_slot.003",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_front_optics",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Scout_front_landing_light",
+      "triangles": 108,
+      "layer": "lights"
+    }
+  ],
+  "triangles": 11719
+}

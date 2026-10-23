@@ -1,0 +1,1714 @@
+{
+  "id": "cargo",
+  "generator": "Blender 5.2.2 LTS",
+  "axis": "Three.js Y-up +Z nose (airship long axis X)",
+  "exportScale": [
+    1,
+    1,
+    1
+  ],
+  "layers": {
+    "body": {
+      "vertices": 31400,
+      "triangles": 16956
+    },
+    "lights": {
+      "vertices": 448,
+      "triangles": 344
+    },
+    "glass": {
+      "vertices": 448,
+      "triangles": 312
+    }
+  },
+  "bounds": {
+    "min": [
+      -6.005949974060059,
+      -1.875,
+      -7.849999904632568
+    ],
+    "max": [
+      6.005949974060059,
+      2.6571078300476074,
+      8.350000381469727
+    ]
+  },
+  "objects": [
+    {
+      "name": "Cargo central keel",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 upper longitudinal beam",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal spine 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 truss tie 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal spine 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 truss tie 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal spine 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 truss tie 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal spine 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 truss tie 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal spine 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 truss tie 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal spine 5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 truss tie 5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal spine 6",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 truss tie 6",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 upper longitudinal beam",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal spine 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 truss tie 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal spine 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 truss tie 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal spine 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 truss tie 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal spine 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 truss tie 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal spine 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 truss tie 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal spine 5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 truss tie 5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal spine 6",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 truss tie 6",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo transverse load spar -4.9",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal engine support -4.9",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal engine support -4.9",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo transverse load spar 2.3",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 diagonal engine support 2.3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 diagonal engine support 2.3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 chamfered pressure container",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 corner post -1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 corner post -1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 corner post 1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 corner post 1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 outer load rail -1.76",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 cross rail -1.76 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 cross rail -1.76 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 outer load rail 0.57",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 cross rail 0.57 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 cross rail 0.57 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 inset wall",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 wall corrugation 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 wall corrugation 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 wall corrugation 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 wall corrugation 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 wall corrugation 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 lock pad -1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 positive latch -1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 lock pad -1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 positive latch -1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 lock pad 1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 positive latch 1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 lock pad 1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 positive latch 1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 maintenance hatch",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 hatch inset",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 top lock bridge -0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 top lock bridge 0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 identity panel",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 amber ID slot 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 amber ID slot 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 amber ID slot 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 -1 cargo status light",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo bay 1 1 chamfered pressure container",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 corner post -1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 corner post -1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 corner post 1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 corner post 1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 outer load rail -1.76",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 cross rail -1.76 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 cross rail -1.76 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 outer load rail 0.57",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 cross rail 0.57 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 cross rail 0.57 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 inset wall",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 wall corrugation 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 wall corrugation 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 wall corrugation 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 wall corrugation 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 wall corrugation 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 lock pad -1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 positive latch -1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 lock pad -1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 positive latch -1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 lock pad 1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 positive latch 1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 lock pad 1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 positive latch 1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 maintenance hatch",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 hatch inset",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 top lock bridge -0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 top lock bridge 0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 identity panel",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 amber ID slot 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 amber ID slot 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 amber ID slot 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 1 1 cargo status light",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo bay 2 -1 chamfered pressure container",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 corner post -1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 corner post -1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 corner post 1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 corner post 1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 outer load rail -1.76",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 cross rail -1.76 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 cross rail -1.76 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 outer load rail 0.57",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 cross rail 0.57 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 cross rail 0.57 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 inset wall",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 wall corrugation 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 wall corrugation 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 wall corrugation 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 wall corrugation 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 wall corrugation 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 lock pad -1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 positive latch -1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 lock pad -1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 positive latch -1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 lock pad 1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 positive latch 1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 lock pad 1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 positive latch 1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 maintenance hatch",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 hatch inset",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 top lock bridge -0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 top lock bridge 0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 identity panel",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 amber ID slot 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 amber ID slot 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 amber ID slot 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 -1 cargo status light",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo bay 2 1 chamfered pressure container",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 corner post -1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 corner post -1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 corner post 1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 corner post 1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 outer load rail -1.76",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 cross rail -1.76 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 cross rail -1.76 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 outer load rail 0.57",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 cross rail 0.57 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 cross rail 0.57 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 inset wall",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 wall corrugation 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 wall corrugation 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 wall corrugation 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 wall corrugation 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 wall corrugation 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 lock pad -1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 positive latch -1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 lock pad -1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 positive latch -1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 lock pad 1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 positive latch 1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 lock pad 1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 positive latch 1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 maintenance hatch",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 hatch inset",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 top lock bridge -0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 top lock bridge 0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 identity panel",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 amber ID slot 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 amber ID slot 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 amber ID slot 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 2 1 cargo status light",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo bay 3 -1 chamfered pressure container",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 corner post -1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 corner post -1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 corner post 1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 corner post 1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 outer load rail -1.76",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 cross rail -1.76 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 cross rail -1.76 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 outer load rail 0.57",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 cross rail 0.57 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 cross rail 0.57 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 inset wall",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 wall corrugation 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 wall corrugation 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 wall corrugation 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 wall corrugation 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 wall corrugation 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 lock pad -1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 positive latch -1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 lock pad -1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 positive latch -1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 lock pad 1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 positive latch 1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 lock pad 1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 positive latch 1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 maintenance hatch",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 hatch inset",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 top lock bridge -0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 top lock bridge 0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 identity panel",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 amber ID slot 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 amber ID slot 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 amber ID slot 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 -1 cargo status light",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo bay 3 1 chamfered pressure container",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 corner post -1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 corner post -1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 corner post 1.23 -1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 corner post 1.23 1.43",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 outer load rail -1.76",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 cross rail -1.76 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 cross rail -1.76 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 outer load rail 0.57",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 cross rail 0.57 -1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 cross rail 0.57 1.44",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 inset wall",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 wall corrugation 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 wall corrugation 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 wall corrugation 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 wall corrugation 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 wall corrugation 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 lock pad -1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 positive latch -1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 lock pad -1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 positive latch -1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 lock pad 1.21 -1.48",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 positive latch 1.21 -1.48",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 lock pad 1.21 0.31",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 positive latch 1.21 0.31",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 maintenance hatch",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 hatch inset",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 top lock bridge -0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 top lock bridge 0.33",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 identity panel",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 amber ID slot 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 amber ID slot 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 amber ID slot 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo bay 3 1 cargo status light",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo command module",
+      "triangles": 332,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo armored cockpit canopy",
+      "triangles": 124,
+      "layer": "glass"
+    },
+    {
+      "name": "Cargo cockpit A pillar -1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit side rail -1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit lower cheek -1",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit cooling louver -1 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit cooling louver -1 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit cooling louver -1 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit cooling louver -1 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo approach headlamp -1",
+      "triangles": 60,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod segmented casing",
+      "triangles": 448,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod aft ceramic nozzle",
+      "triangles": 320,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod aft titanium lip",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod narrow exhaust emitter",
+      "triangles": 64,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod aft dark core",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod front compressor shadow",
+      "triangles": 124,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor cone",
+      "triangles": 236,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 6",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 7",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 8",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 9",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 10",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 11",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod compressor vane 12",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod casing joint 0",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod casing joint 1",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod casing joint 2",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod service fairing -1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod cooling slot -1 0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod cooling slot -1 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod cooling slot -1 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod cooling slot -1 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod service fairing 1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod cooling slot 1 0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod cooling slot 1 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod cooling slot 1 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 detached propulsion pod cooling slot 1 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 stabilizer",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 stabilizer panel",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 engine identification",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo -1 engine status bar",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo cockpit A pillar 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit side rail 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit lower cheek 1",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit cooling louver 1 0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit cooling louver 1 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit cooling louver 1 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit cooling louver 1 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo approach headlamp 1",
+      "triangles": 60,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod segmented casing",
+      "triangles": 448,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod aft ceramic nozzle",
+      "triangles": 320,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod aft titanium lip",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod narrow exhaust emitter",
+      "triangles": 64,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod aft dark core",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod front compressor shadow",
+      "triangles": 124,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor cone",
+      "triangles": 236,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 6",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 7",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 8",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 9",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 10",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 11",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod compressor vane 12",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod casing joint 0",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod casing joint 1",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod casing joint 2",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod service fairing -1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod cooling slot -1 0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod cooling slot -1 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod cooling slot -1 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod cooling slot -1 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod service fairing 1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod cooling slot 1 0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod cooling slot 1 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod cooling slot 1 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 detached propulsion pod cooling slot 1 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 stabilizer",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 stabilizer panel",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 engine identification",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo 1 engine status bar",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cargo cockpit roof divider 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo cockpit roof divider 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo roof sensor socket",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Cargo roof sensor lens",
+      "triangles": 188,
+      "layer": "glass"
+    }
+  ],
+  "triangles": 17612
+}

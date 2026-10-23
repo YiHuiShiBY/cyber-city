@@ -1,0 +1,1755 @@
+{
+  "id": "airship",
+  "generator": "Blender 5.2.2 LTS",
+  "axis": "Three.js Y-up +Z nose (airship long axis X)",
+  "exportScale": [
+    0.06666666666666667,
+    0.2857142857142857,
+    0.2857142857142857
+  ],
+  "layers": {
+    "body": {
+      "vertices": 23334,
+      "triangles": 17176
+    },
+    "lights": {
+      "vertices": 624,
+      "triangles": 736
+    }
+  },
+  "bounds": {
+    "min": [
+      -0.4973333477973938,
+      -1.5457144975662231,
+      -1.0148160457611084
+    ],
+    "max": [
+      0.5061333775520325,
+      1.0387139320373535,
+      1.0148160457611084
+    ]
+  },
+  "objects": [
+    {
+      "name": "Hull-PressureShell",
+      "triangles": 1368,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-01-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-02-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-03-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-04-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-05-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-06-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-07-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-08-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-09-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-01",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-02",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-03",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-04",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-05",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-06",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-07",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-08",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-09",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-10",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-11",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Armor-10-12",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-LongitudinalRib-01",
+      "triangles": 244,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-LongitudinalRib-02",
+      "triangles": 244,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-LongitudinalRib-03",
+      "triangles": 244,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-LongitudinalRib-04",
+      "triangles": 244,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-LongitudinalRib-05",
+      "triangles": 244,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-LongitudinalRib-06",
+      "triangles": 244,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-LongitudinalRib-07",
+      "triangles": 244,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-LongitudinalRib-08",
+      "triangles": 244,
+      "layer": "body"
+    },
+    {
+      "name": "Nose-PressureCap",
+      "triangles": 140,
+      "layer": "body"
+    },
+    {
+      "name": "Nose-SensorGlass",
+      "triangles": 76,
+      "layer": "body"
+    },
+    {
+      "name": "Nose-SensorRim",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "Nose-SensorDot",
+      "triangles": 44,
+      "layer": "lights"
+    },
+    {
+      "name": "Keel-StructuralSegment-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-StructuralSegment-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-StructuralSegment-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-StructuralSegment-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-StructuralSegment-5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-ServiceNode--3.25",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler--3.25--1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler--3.25-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-ServiceNode--1.7",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler--1.7--1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler--1.7-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-ServiceNode--0.15",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler--0.15--1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler--0.15-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-ServiceNode-1.4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler-1.4--1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler-1.4-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-ServiceNode-3.0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler-3.0--1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Keel-HydraulicCoupler-3.0-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-LowerPressureCabin-Side--1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-LowerPressureCabin-Side-1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-LowerPressureCabin-Aft",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-LowerPressureCabin-Fore",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-UpperBridge",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-InterdeckShadow",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-RoofArmour",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-LowerMechanicalDeck-Side--1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-LowerMechanicalDeck-Side-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-LowerMechanicalDeck-Aft",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-LowerMechanicalDeck-Fore",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket--1-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow--1-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection--1-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket--1-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow--1-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection--1-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket--1-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow--1-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection--1-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket--1-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow--1-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection--1-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket--1-4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow--1-4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection--1-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-DeckSafetyLamp--1",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cabin-WindowGasket--1-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow--1-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection--1-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket--1-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow--1-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection--1-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket--1-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow--1-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection--1-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket--1-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow--1-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection--1-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket--1-4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow--1-4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection--1-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket--1-5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow--1-5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection--1-5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-DeckSafetyLamp--1",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Gondola-Suspension--1--1.3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-Suspension--1-1.75",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-DiagonalBrace--1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-AftServiceDoor--1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-DoorHandle--1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket-1-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow-1-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection-1-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket-1-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow-1-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection-1-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket-1-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow-1-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection-1-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket-1-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow-1-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection-1-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowGasket-1-4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-InsetWindow-1-4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindowReflection-1-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-DeckSafetyLamp-1",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Cabin-WindowGasket-1-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow-1-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection-1-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket-1-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow-1-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection-1-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket-1-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow-1-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection-1-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket-1-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow-1-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection-1-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket-1-4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow-1-4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection-1-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowGasket-1-5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-InsetWindow-1-5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-WindowReflection-1-5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Cabin-DeckSafetyLamp-1",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Gondola-Suspension-1--1.3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-Suspension-1-1.75",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-DiagonalBrace-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-AftServiceDoor-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-DoorHandle-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-ForwardWindshield",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Bridge-WindshieldMullion",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-SearchlightHousing",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "Gondola-SearchlightLens",
+      "triangles": 92,
+      "layer": "lights"
+    },
+    {
+      "name": "Engine--1-Mount",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-SegmentedShroud",
+      "triangles": 280,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-ForwardCap",
+      "triangles": 60,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-RecessedNozzle",
+      "triangles": 112,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-RearArmourLip",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-NozzleCollar",
+      "triangles": 240,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-EnergyCore",
+      "triangles": 240,
+      "layer": "lights"
+    },
+    {
+      "name": "Engine--1-TurbineHub",
+      "triangles": 76,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TurbineBlade-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TurbineBlade-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TurbineBlade-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TurbineBlade-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TurbineBlade-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TurbineBlade-5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-CasingRib-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-CasingRib-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-CasingRib-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-CasingRib-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-CasingRib-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-CasingRib-5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TopVent-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TopVent-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TopVent-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-TopVent-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Engine--1-ServiceLamp",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Engine-1-Mount",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-SegmentedShroud",
+      "triangles": 280,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-ForwardCap",
+      "triangles": 60,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-RecessedNozzle",
+      "triangles": 112,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-RearArmourLip",
+      "triangles": 336,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-NozzleCollar",
+      "triangles": 240,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-EnergyCore",
+      "triangles": 240,
+      "layer": "lights"
+    },
+    {
+      "name": "Engine-1-TurbineHub",
+      "triangles": 76,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TurbineBlade-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TurbineBlade-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TurbineBlade-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TurbineBlade-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TurbineBlade-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TurbineBlade-5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-CasingRib-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-CasingRib-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-CasingRib-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-CasingRib-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-CasingRib-4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-CasingRib-5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TopVent-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TopVent-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TopVent-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-TopVent-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Engine-1-ServiceLamp",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Tail-ControlFin-1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-1-LeadingSpar",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-1-RudderJoint",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-1-TipID",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Tail-ControlFin-2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-2-LeadingSpar",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-2-RudderJoint",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-2-TipID",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Tail-ControlFin-3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-3-LeadingSpar",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-3-RudderJoint",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-3-TipID",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Tail-ControlFin-4",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-4-LeadingSpar",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-4-RudderJoint",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Tail-ControlFin-4-TipID",
+      "triangles": 12,
+      "layer": "lights"
+    },
+    {
+      "name": "Dorsal-ServicePlinth-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-ServiceCover-0",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-0-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-0-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-0-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-ServicePlinth-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-ServiceCover-1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-1-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-1-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-1-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-ServicePlinth-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-ServiceCover-2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-2-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-2-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-2-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-ServicePlinth-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-ServiceCover-3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-3-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-3-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Dorsal-VentSlat-3-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-MaintenanceStencil--1-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-MaintenanceStencil--1-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-MaintenanceStencil--1-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-MaintenanceStencil--1-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-SafetyMarker--1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-MaintenanceStencil-1-0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-MaintenanceStencil-1-1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-MaintenanceStencil-1-2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-MaintenanceStencil-1-3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Hull-SafetyMarker-1",
+      "triangles": 12,
+      "layer": "body"
+    }
+  ],
+  "triangles": 17912
+}

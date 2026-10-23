@@ -1,0 +1,914 @@
+{
+  "id": "passenger",
+  "generator": "Blender 5.2.2 LTS",
+  "axis": "Three.js Y-up +Z nose (airship long axis X)",
+  "exportScale": [
+    1,
+    1,
+    1
+  ],
+  "layers": {
+    "body": {
+      "vertices": 19092,
+      "triangles": 12132
+    },
+    "lights": {
+      "vertices": 416,
+      "triangles": 304
+    },
+    "glass": {
+      "vertices": 848,
+      "triangles": 672
+    }
+  },
+  "bounds": {
+    "min": [
+      -6.384119033813477,
+      -0.7200000286102295,
+      -5.650000095367432
+    ],
+    "max": [
+      6.384119033813477,
+      1.931674599647522,
+      5.75
+    ]
+  },
+  "objects": [
+    {
+      "name": "Passenger continuous pressure hull",
+      "triangles": 892,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger crown panel 1",
+      "triangles": 68,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger crown panel 2",
+      "triangles": 68,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger crown panel 3",
+      "triangles": 68,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger crown panel 4",
+      "triangles": 68,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger crown panel 5",
+      "triangles": 68,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 structural wing",
+      "triangles": 148,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 leading edge",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 inset wing armor",
+      "triangles": 104,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 independent flap 1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge -1 0 2.29",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge -1 0 2.72",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 independent flap 2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge -1 1 3.25",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge -1 1 3.68",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 independent flap 3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge -1 2 4.21",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge -1 2 4.64",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 tailplane",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 dorsal tail",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 tail inset",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan segmented casing",
+      "triangles": 448,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan aft ceramic nozzle",
+      "triangles": 320,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan aft titanium lip",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan narrow exhaust emitter",
+      "triangles": 64,
+      "layer": "lights"
+    },
+    {
+      "name": "Passenger -1 turbofan aft dark core",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan front compressor shadow",
+      "triangles": 124,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor cone",
+      "triangles": 236,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 6",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 7",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 8",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 9",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan compressor vane 10",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan casing joint 0",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan casing joint 1",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan service fairing -1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan cooling slot -1 0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan cooling slot -1 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan cooling slot -1 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan cooling slot -1 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan service fairing 1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan cooling slot 1 0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan cooling slot 1 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan cooling slot 1 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 turbofan cooling slot 1 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 engine pylon",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 wingtip marker",
+      "triangles": 44,
+      "layer": "lights"
+    },
+    {
+      "name": "Passenger 1 structural wing",
+      "triangles": 148,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 leading edge",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 inset wing armor",
+      "triangles": 104,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 independent flap 1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge 1 0 2.29",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge 1 0 2.72",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 independent flap 2",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge 1 1 3.25",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge 1 1 3.68",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 independent flap 3",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge 1 2 4.21",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger flap hinge 1 2 4.64",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 tailplane",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 dorsal tail",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 tail inset",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan segmented casing",
+      "triangles": 448,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan aft ceramic nozzle",
+      "triangles": 320,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan aft titanium lip",
+      "triangles": 192,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan narrow exhaust emitter",
+      "triangles": 64,
+      "layer": "lights"
+    },
+    {
+      "name": "Passenger 1 turbofan aft dark core",
+      "triangles": 92,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan front compressor shadow",
+      "triangles": 124,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor cone",
+      "triangles": 236,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 4",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 5",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 6",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 7",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 8",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 9",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan compressor vane 10",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan casing joint 0",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan casing joint 1",
+      "triangles": 64,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan service fairing -1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan cooling slot -1 0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan cooling slot -1 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan cooling slot -1 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan cooling slot -1 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan service fairing 1",
+      "triangles": 108,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan cooling slot 1 0",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan cooling slot 1 1",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan cooling slot 1 2",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 turbofan cooling slot 1 3",
+      "triangles": 12,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 engine pylon",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 wingtip marker",
+      "triangles": 44,
+      "layer": "lights"
+    },
+    {
+      "name": "Passenger -1 cabin window 1 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 1 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 window sill 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 2 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 2 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 window sill 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 3 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 3 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 window sill 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 4 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 4 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 window sill 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 5 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 5 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 window sill 5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 6 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 6 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 window sill 6",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 7 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 7 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 window sill 7",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 8 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 cabin window 8 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 window sill 8",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 boarding door 1 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 door glazing 1 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 door glazing 1 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 door handle 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 boarding door 2 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 door glazing 2 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 door glazing 2 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger -1 door handle 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger -1 lower cabin chine",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 1 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 1 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 window sill 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 2 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 2 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 window sill 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 3 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 3 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 window sill 3",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 4 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 4 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 window sill 4",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 5 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 5 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 window sill 5",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 6 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 6 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 window sill 6",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 7 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 7 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 window sill 7",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 8 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 cabin window 8 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 window sill 8",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 boarding door 1 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 door glazing 1 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 door glazing 1 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 door handle 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 boarding door 2 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 door glazing 2 bezel",
+      "triangles": 120,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 door glazing 2 recessed glass",
+      "triangles": 18,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger 1 door handle 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger 1 lower cabin chine",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger forward cockpit canopy",
+      "triangles": 124,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger canopy A pillar -1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger canopy shoulder rail -1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger canopy A pillar 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger canopy shoulder rail 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger canopy center divider 1",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger canopy center divider 2",
+      "triangles": 44,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger roof navigation recess",
+      "triangles": 188,
+      "layer": "body"
+    },
+    {
+      "name": "Passenger roof data lens",
+      "triangles": 188,
+      "layer": "glass"
+    },
+    {
+      "name": "Passenger nose landing light -1",
+      "triangles": 44,
+      "layer": "lights"
+    },
+    {
+      "name": "Passenger nose landing light 1",
+      "triangles": 44,
+      "layer": "lights"
+    }
+  ],
+  "triangles": 13108
+}

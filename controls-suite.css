@@ -1,0 +1,31 @@
+/* 操作模式套件样式（与千人小镇 HUD 同风格：毛玻璃、青蓝、胶囊） */
+.tcs-mount { pointer-events: none; }
+.tcs-panel, .tcs-entry, .tcs-joystick { pointer-events: auto; }
+.tcs-panel { position: absolute; top: 14px; left: 14px; z-index: 8; width: 182px; border: 1px solid rgba(51, 86, 107, .28); border-radius: 8px; background: rgba(251, 253, 255, .86); backdrop-filter: blur(6px); overflow: hidden; box-shadow: 0 4px 18px rgba(24, 42, 56, .14); }
+.tcs-panel[hidden] { display: none; }
+.tcs-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 8px 7px 11px; font: 600 10px/1 inherit; letter-spacing: .09em; color: #22333f; }
+.tcs-head > span, .tcs-head button { white-space: nowrap; }
+.tcs-head button { border: 1px solid rgba(51, 86, 107, .38); border-radius: 999px; background: #eef4f6; color: #33566b; font: 600 9px/1 inherit; letter-spacing: .05em; cursor: pointer; padding: 5px 9px; }
+.tcs-head button:hover { background: #dfe9ee; }
+.tcs-modes { display: flex; gap: 5px; padding: 0 11px 8px; border-bottom: 1px solid rgba(51, 86, 107, .16); }
+.tcs-chip { flex: 1; padding: 6px 0; border: 1px solid rgba(51, 86, 107, .35); border-radius: 6px; background: transparent; color: #33566b; font: 600 9.5px/1 inherit; letter-spacing: .04em; cursor: pointer; }
+.tcs-chip:hover { background: #eef4f6; }
+.tcs-chip[aria-pressed="true"] { background: #33566b; color: #f2ede1; border-color: #33566b; }
+.tcs-body { padding: 7px 11px 9px; }
+.tcs-body dl { margin: 0; display: grid; gap: 3px; }
+.tcs-body dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.tcs-body dt { font: 600 9.5px/1.45 "SFMono-Regular", Consolas, monospace; color: #33566b; white-space: nowrap; }
+.tcs-body dd { margin: 0; font: 9.5px/1.45 inherit; color: #5b7585; text-align: right; }
+.tcs-entry { position: absolute; top: 14px; left: 14px; z-index: 8; padding: 7px 12px; border: 1px solid rgba(51, 86, 107, .4); border-radius: 999px; background: rgba(251, 253, 255, .86); color: #33566b; font: 600 10px/1 inherit; letter-spacing: .08em; backdrop-filter: blur(6px); cursor: pointer; }
+.tcs-entry[hidden] { display: none; }
+.tcs-entry:hover { background: #eef4f6; }
+.tcs-joystick { position: absolute; left: 18px; bottom: 18px; z-index: 12; touch-action: none; user-select: none; }
+.tcs-joystick[hidden] { display: none; }
+.tcs-joy-base { width: 104px; height: 104px; border-radius: 50%; border: 1.5px solid rgba(28, 48, 62, .58); background: rgba(24, 42, 56, .26); backdrop-filter: blur(3px); position: relative; box-shadow: 0 2px 12px rgba(24, 42, 56, .22); }
+.tcs-joy-base::after { content: ""; position: absolute; inset: 30px; border-radius: 50%; border: 1px dashed rgba(232, 243, 249, .38); }
+.tcs-joy-knob { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: rgba(250, 253, 255, .93); border: 1.5px solid rgba(28, 48, 62, .5); box-shadow: 0 3px 14px rgba(20, 38, 52, .35); }
+.tcs-joy-knob::after { content: "✥"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #33566b; }
+.tcs-fps-hint { position: absolute; left: 50%; top: 16px; transform: translateX(-50%); z-index: 14; padding: 8px 16px; border: 1px solid rgba(51, 86, 107, .28); border-radius: 999px; background: rgba(251, 253, 255, .88); backdrop-filter: blur(6px); font: 600 10.5px/1 inherit; letter-spacing: .06em; color: #33566b; pointer-events: none; transition: opacity .45s ease; }
+.tcs-fps-hint[hidden] { display: none; }
+.tcs-fps-hint.tcs-faded { opacity: .25; }
+@media (max-width: 760px) { .tcs-panel, .tcs-entry { top: 10px; left: 10px; } .tcs-panel { width: 170px; } .tcs-joystick { left: 12px; bottom: 12px; } }

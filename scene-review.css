@@ -1,0 +1,70 @@
+.scene-review { position: fixed; inset: 0; z-index: 7; pointer-events: none; color: #e6f4f2; }
+.scene-review[hidden], .scene-review [hidden] { display: none !important; }
+.scene-review-canvas { cursor: crosshair; }
+.scene-review__panel {
+  position: absolute; right: max(var(--edge, 24px), env(safe-area-inset-right));
+  bottom: calc(var(--bottom, 28px) + 142px); width: 326px; max-height: min(58vh, 570px);
+  display: flex; flex-direction: column; padding: 15px; border: 1px solid rgb(131 222 212 / 36%);
+  border-radius: 5px; background: rgb(5 17 27 / 96%); box-shadow: 0 14px 46px #0008;
+  backdrop-filter: blur(18px); pointer-events: auto; font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+.scene-review__panel--collapsed > :not(.scene-review__heading) { display: none; }
+.scene-review__heading { display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+.scene-review__heading h2 { margin: 0; font-size: 13px; font-weight: 500; letter-spacing: 1.4px; color: #a0eee3; }
+.scene-review__count { margin-right: auto; font-size: 10px; color: #92b3ba; }
+.scene-review button { min-height: 30px; padding: 0 9px; border: 1px solid #80bcbd33; border-radius: 3px; font-size: 10px; letter-spacing: .3px; }
+.scene-review button:disabled { opacity: .35; cursor: default; }
+.scene-review button:not(:disabled):hover { color: #e9fffc; border-color: #91e5dd88; background: #82e4dc15; }
+.scene-review__heading button { min-height: 28px; padding: 0 7px; color: #9bb7c0; border-color: transparent; font-size: 9px; }
+.scene-review__help { margin: 10px 0 12px; font-size: 10px; color: #94adb8; line-height: 1.7; flex-shrink: 0; }
+.scene-review__list { margin: 0; padding: 0 4px 0 0; list-style: none; overflow-y: auto; min-height: 0; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #467675 #0b1b27; }
+.scene-review__empty { margin: 14px 0 24px; padding: 20px 8px; border: 1px dashed #8dd2ca2b; color: #8cabb4; font-size: 11px; line-height: 1.9; text-align: center; white-space: pre-line; }
+.scene-review__item { padding: 11px 10px; margin-bottom: 8px; background: #122d374d; border: 1px solid #9cd4d31f; border-left: 2px solid var(--review-color); border-radius: 2px; }
+.scene-review__item:last-child { margin-bottom: 0; }
+.scene-review__item-top { display: flex; align-items: baseline; gap: 8px; }
+.scene-review__item-number { color: var(--review-color); font: 12px/1.5 Consolas, monospace; }
+.scene-review__item-top strong { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #d0e1e2; font-size: 11px; font-weight: 400; }
+.scene-review__coordinates { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 7px; color: #d4e7e9; font: 10px/1.7 "Cascadia Code", Consolas, monospace; }
+.scene-review__path { margin: 5px 0 9px; color: #7799a6; font: 9px/1.55 Consolas, monospace; overflow-wrap: anywhere; }
+.scene-review__item-actions { display: flex; gap: 6px; }
+.scene-review__item-actions button:last-child { margin-left: auto; color: #b49b9f; }
+.scene-review__actions { display: flex; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid #8fd6d129; flex-shrink: 0; }
+.scene-review__actions button { flex: 1; min-height: 33px; }
+.scene-review__actions button:first-child { color: #b7f1e7; background: #76dacb12; }
+.scene-review__status { min-height: 14px; margin: 8px 0 0; font-size: 9px; line-height: 1.6; color: #90b7bc; flex-shrink: 0; }
+.scene-review__manual-copy { width: 100%; min-height: 90px; margin-top: 8px; padding: 8px; resize: vertical; border: 1px solid #80bbb955; border-radius: 3px; color: #d5e7ea; background: #06131f; font: 10px/1.6 Consolas, monospace; }
+.scene-review__pins { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.scene-review__pin { position: absolute; transform: translate(-50%, -50%); pointer-events: none; }
+.scene-review__pin-number { position: relative; display: grid; place-items: center; width: 25px; height: 25px; border: 1px solid var(--review-color); border-radius: 50%; color: #03131a; background: var(--review-color); box-shadow: 0 0 0 5px #03121c66, 0 3px 14px #0008; font: bold 12px/1 Consolas, monospace; }
+.scene-review__pin-number::after { content: ''; position: absolute; left: 28px; top: 11px; width: 12px; height: 1px; background: var(--review-color); }
+.scene-review__pin-label { position: absolute; left: 42px; top: 50%; transform: translateY(-50%); display: grid; gap: 3px; padding: 7px 9px; max-width: 235px; border: 1px solid #95d4cb55; border-left: 2px solid var(--review-color); border-radius: 3px; background: #071925e8; box-shadow: 0 3px 15px #0005; white-space: nowrap; }
+.scene-review__pin-label strong { overflow: hidden; text-overflow: ellipsis; font-size: 9px; line-height: 1.35; font-weight: 400; color: var(--review-color); }
+.scene-review__pin-label span { color: #ddeeed; font: 9px/1.5 Consolas, monospace; }
+.scene-review__pin--left .scene-review__pin-label { left: auto; right: 42px; border-left: 1px solid #95d4cb55; border-right: 2px solid var(--review-color); }
+.scene-review__pin--left .scene-review__pin-number::after { left: auto; right: 28px; }
+.scene-review__hover { position: absolute; width: max-content; max-width: 290px; padding: 10px 12px; border: 1px solid #8dede18c; border-radius: 3px; background: #061923f2; box-shadow: 0 5px 22px #0006; pointer-events: none; }
+.scene-review__hover strong, .scene-review__hover span, .scene-review__hover small { display: block; }
+.scene-review__hover strong { color: #a4efe3; font-size: 10px; line-height: 1.6; font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.scene-review__hover span { margin-top: 4px; color: #d2e7e7; font: 10px/1.5 Consolas, monospace; }
+.scene-review__hover small { margin-top: 6px; color: #829fa9; font-size: 9px; }
+@media (max-width: 850px) {
+  .scene-review__panel { width: 290px; padding: 12px; max-height: 52vh; }
+  .scene-review__pin-label { max-width: 185px; padding: 6px 7px; }
+}
+@media (max-width: 650px) {
+  .scene-review__panel { right: 10px; top: max(12px, env(safe-area-inset-top)); bottom: auto; width: min(310px, calc(100vw - 20px)); max-height: min(46vh, calc(100vh - 320px)); padding: 10px; }
+  .scene-review__heading h2 { font-size: 12px; }
+  .scene-review__help { margin: 8px 0; font-size: 9px; }
+  .scene-review__empty { margin: 8px 0 12px; padding: 12px 6px; }
+  .scene-review__pin-label { max-width: 155px; }
+  .scene-review__pin-label span { font-size: 8px; }
+  .scene-review__pin-number { width: 23px; height: 23px; font-size: 11px; }
+}
+@media (max-height: 600px) and (min-width: 651px) {
+  .scene-review__panel { right: 18px; top: 12px; bottom: auto; max-height: calc(100vh - 137px); }
+  .scene-review__help { margin: 6px 0; }
+}
+@media (max-height: 600px) and (max-width: 650px) {
+  .scene-review__panel { right: 8px; top: 8px; bottom: auto; max-height: max(140px, calc(100vh - 330px)); }
+  .scene-review__help, .scene-review__status { display: none; }
+}

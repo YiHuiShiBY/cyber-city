@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>雨夜 · NEON CROSSING</title><link rel="icon" href="data:,"><link rel="stylesheet" href="./refined.css"><link rel="stylesheet" href="./district-navigation.css">
+<link rel="stylesheet" href="./controls-suite.css?v=001"><link rel="stylesheet" href="./city-life-navigation.css"><link rel="stylesheet" href="./megacity.css"><link rel="stylesheet" href="./scene-review.css"><script src="./controls-suite.js?v=001"></script>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script></head><body>
+<div class="header"><div class="eyebrow">GREATER KOWLOON / AFTER HOURS</div><h1>雨夜霓虹</h1><p>NEON CROSSING · 九龍片区</p><div class="rule"></div></div><div class="index">DISTRICT <b>九龍 / 2049</b><br><span id="district-stats">09 SECTORS · 104 BUILDINGS</span><br><span id="weather-status">23:48 / LIGHT RAIN</span></div>
+<div class="weather" aria-label="氛围控制"><a class="character-admin-link" href="../../" target="_top" title="回到 仪绘士 · 画境长廊">↩ 返回作品集</a><a class="character-admin-link" href="./character-admin.html">角色管理台 ↗</a><button id="review-mode" aria-pressed="false">审阅 · 关</button><button id="rain" aria-label="切换雨势">雨势 · 微雨</button><button id="fx" aria-pressed="true">辉光 · 开</button><button id="ibl" aria-pressed="true">反射 · 开</button><button id="shadows" aria-pressed="true">阴影 · 开</button><button id="ao" aria-pressed="true">遮蔽 · 开</button><button id="pause" aria-pressed="false">时间 · 流动</button></div>
+<div class="panel"><div class="views" aria-label="镜头控制"><button id="overview" class="active" aria-pressed="true">01 / 巨城全景</button><button id="street" aria-pressed="false">02 / 街头漫游</button><button id="skyline" aria-pressed="false">03 / 云端双塔</button><button id="headquarters" aria-pressed="false">04 / 天穹总部</button><button id="skyway" aria-pressed="false">05 / 环城高架</button><button id="rotate" aria-pressed="true">巡航 · 开</button><button id="fullscreen" aria-pressed="false" title="全屏观景 · F">全屏</button><button id="ui-toggle" aria-pressed="false" title="隐藏标题与操作条，腾出画面 · H">隐藏界面</button></div><div class="caption"><span>●</span> NINE SECTORS / ONE SLEEPLESS CITY<br>拖动环绕 · 滚轮缩放 · 双指移动<span id="navigation-help" class="keyboard-hint">WASD / 方向键 移动 · Q 降 / E 升 · 1-5 换景 · 空格 暂停 · Shift 加速 · H 隐界面</span></div></div>
+<div id="keys-hint" class="keys-hint" aria-label="操作说明"><div class="keys-hint-head"><span>⌨ 镜头操作</span><button id="keys-hint-toggle" type="button" aria-expanded="true">收起</button></div><div class="keys-hint-body"><dl><div><dt>拖动 · 滚轮</dt><dd>环绕 · 缩放</dd></div><div><dt>W A S D</dt><dd>平移移动</dd></div><div><dt>Q / E</dt><dd>下降 · 上升</dd></div><div><dt>方向键</dt><dd>代替 W A S D</dd></div><div><dt>Shift</dt><dd>加速移动</dd></div><div><dt>1 – 5</dt><dd>切换五大镜头</dd></div><div><dt>空格</dt><dd>暂停 · 继续</dd></div><div><dt>C</dt><dd>巡航 开 · 关</dd></div><div><dt>R</dt><dd>回巨城全景</dd></div><div><dt>F</dt><dd>全屏观景</dd></div><div><dt>H</dt><dd>隐藏界面</dd></div><div><dt>Esc</dt><dd>停止 · 退出模式</dd></div></dl></div></div>
+<button id="show-ui" type="button" hidden>界面 ×</button>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js';
+import {RenderPass} from 'three/addons/postprocessing/RenderPass.js';
+import {UnrealBloomPass} from 'three/addons/postprocessing/UnrealBloomPass.js';
+import {GTAOPass} from 'three/addons/postprocessing/GTAOPass.js';
+import {ShaderPass} from 'three/addons/postprocessing/ShaderPass.js';
+import {OutputPass} from 'three/addons/postprocessing/OutputPass.js';
+import {createKeyboardNavigation} from './keyboard-navigation.js';
+import {createDistrict} from './district.js';
+import {createDistrictNavigation} from './district-navigation.js';
+import {createCityLifeNavigation} from './city-life-navigation.js';
+import {createSceneReview} from './scene-review.js';
+import {makeNeonRiders} from './district-riders.js';
+import {makeStreetRobots} from './district-streetgear.js';
+import {sampleWalkingGait} from './pedestrian-gait.js';
+import { makeDetailedFlyer } from './transport-model-details.js';
+import { installDetailModel } from './city-detail-geometry.js';
+import { makeCyberBlock, makeFlyer, neon } from './cyber-block-factories.js';
+
+const scene=new THREE.Scene();scene.background=new THREE.Color('#0a111f');scene.fog=new THREE.FogExp2('#0e1728',.015);
+const sky=new THREE.Mesh(new THREE.SphereGeometry(480,32,18),new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,
+ vertexShader:'varying vec3 vSky;void main(){vSky=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+ fragmentShader:'varying vec3 vSky;void main(){vec3 direction=normalize(vSky);float h=smoothstep(-.06,.72,direction.y);vec3 color=mix(vec3(.082,.134,.198),vec3(.018,.028,.056),h);float glow=exp(-length(direction-vec3(0.,.26,-.96))*5.);color+=vec3(.012,.018,.03)*glow;float band=exp(-max(direction.y,0.)*7.5);vec3 neon=mix(vec3(.052,.096,.118),vec3(.10,.052,.092),smoothstep(-1.,1.,direction.x*1.35));color+=neon*band;color*=mix(.22,1.,smoothstep(-.18,0.,direction.y));gl_FragColor=vec4(color,1.);}'}));
+sky.name='HazeGradient';sky.renderOrder=-2;scene.add(sky);
+// Stars and a moon live inside the sky dome (which tracks the camera), so the
+// night ceiling carries content instead of an empty gradient. Three size
+// buckets keep the star field to one draw.
+const starBuckets=[[340,1.6],[170,2.4],[90,3.4]].map(([count,size])=>{
+ const positions=new Float32Array(count*3);
+ for(let i=0;i<count;i++){
+  const azimuth=Math.random()*Math.PI*2,elevation=Math.acos(Math.random()*.86);
+  const r=466;
+  positions[i*3]=r*Math.sin(elevation)*Math.cos(azimuth);
+  positions[i*3+1]=r*Math.cos(elevation)+8;
+  positions[i*3+2]=r*Math.sin(elevation)*Math.sin(azimuth);
+ }
+ const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));
+ return new THREE.Points(geometry,new THREE.PointsMaterial({color:'#cfe0ff',size,transparent:true,opacity:.85,depthWrite:false,sizeAttenuation:false}));
+});
+const moon=new THREE.Group();moon.name='Moon';
+const moonDisc=new THREE.Mesh(new THREE.CircleGeometry(16,26),new THREE.MeshBasicMaterial({color:'#e8f2ff',toneMapped:false,fog:false}));
+moonDisc.position.set(0,0,458);moon.add(moonDisc);
+const moonHalo=new THREE.Mesh(new THREE.RingGeometry(16.5,30,26),new THREE.MeshBasicMaterial({color:'#9db8e8',transparent:true,opacity:.16,blending:THREE.AdditiveBlending,depthWrite:false,toneMapped:false}));
+moonHalo.position.set(0,0,457.5);moon.add(moonHalo);
+moon.position.set(190,235,-260);moon.lookAt(0,0,0);
+starBuckets.forEach(bucket=>{bucket.frustumCulled=false;sky.add(bucket)});
+sky.add(moon);
+// 0 尺寸环境（后台标签/未布局 webview）里 innerWidth 可能为 0：
+// aspect=0/0=NaN 会让视锥裁掉整座城。先兜底，布局就位后由 healLayout 派发 resize 校正。
+const vw=innerWidth||document.documentElement.clientWidth||1280,vh=innerHeight||document.documentElement.clientHeight||720;let layoutWasZero=!innerWidth||!innerHeight;
+const camera=new THREE.PerspectiveCamera(46,vw/vh,.1,1600);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
+// 像素比下限 1.5：DPR=1 的桌面屏也保持 2.25x 像素的超采样（5090 目标下
+// 这是把闲置 GPU 用起来最便宜的一档）；上限 2 避免高分移动端电量失控。
+const renderPixelRatio=Math.min(Math.max(devicePixelRatio,1.5),2);renderer.setPixelRatio(renderPixelRatio);renderer.setSize(vw,vh);
+renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.48;
+renderer.domElement.setAttribute('aria-label','可拖动旋转、键盘漫游的雨夜霓虹九龍片区');document.body.prepend(renderer.domElement);
+renderer.domElement.setAttribute('aria-describedby','navigation-help');
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.07;
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+controls.autoRotate=!reduceMotion;controls.autoRotateSpeed=.12;controls.maxPolarAngle=Math.PI*.485;controls.minDistance=3;controls.maxDistance=620;
+ scene.add(new THREE.HemisphereLight('#93a8c4','#2b3d4a',2.0));
+const rim=new THREE.DirectionalLight('#809bc6',2.5);rim.position.set(-10,25,-10);scene.add(rim);
+// P3 阴影载体：主方向光沿自身方向外推（光照方向不变），挂 4096 正交阴影
+// 相机盖住 ±115 的整个片区；楼群静止，shadowMap.autoUpdate=false 让贴图
+// 只渲一次（见城市建成后的选择性投射与冻结）。
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
+rim.position.set(-60,150,-60);rim.shadow.mapSize.set(4096,4096);
+Object.assign(rim.shadow.camera,{left:-115,right:115,top:115,bottom:-115,near:20,far:360});
+rim.shadow.camera.updateProjectionMatrix();
+rim.shadow.bias=-2e-4;rim.shadow.normalBias=.05;
+const fill=new THREE.DirectionalLight('#7db6c5',1.7);fill.position.set(18,14,15);scene.add(fill);
+const warm=new THREE.PointLight('#ffb16c',34,20,2);warm.position.set(4.5,2.2,17.5);scene.add(warm);
+const cameraOrbit={epoch:0,azimuth:0,radius:0,height:0,interacting:false};
+function updateControls(){const requested=controls.autoRotate;controls.autoRotate=false;controls.update();controls.autoRotate=requested;}
+function resetCameraOrbit(seconds=performance.now()/1000){const offset=camera.position.clone().sub(controls.target);cameraOrbit.epoch=seconds;cameraOrbit.azimuth=Math.atan2(offset.x,offset.z);cameraOrbit.radius=Math.hypot(offset.x,offset.z);cameraOrbit.height=offset.y;}
+function updateCameraOrbit(seconds){updateControls();if(cameraOrbit.interacting||!controls.autoRotate){resetCameraOrbit(seconds);return;}const angle=cameraOrbit.azimuth-(seconds-cameraOrbit.epoch)*.016755160819145562;camera.position.set(controls.target.x+Math.sin(angle)*cameraOrbit.radius,controls.target.y+cameraOrbit.height,controls.target.z+Math.cos(angle)*cameraOrbit.radius);camera.lookAt(controls.target);}
+controls.addEventListener('start',()=>{cameraOrbit.interacting=true;});controls.addEventListener('end',()=>{updateControls();cameraOrbit.interacting=false;resetCameraOrbit();});
+// GPU 画质层：场景先画进 4x MSAA 的 HalfFloat 目标（线性空间），霓虹在
+// 线性域做 bloom，最后由 OutputPass 统一做 ACES 色调映射与 sRGB 输出。
+// 直渲路径原样保留：?fx=off（或下方开关）时走改造前的 renderer.render，
+// 与旧版逐字节同路，QA 与回退对照都不受影响。
+const fxButton=document.getElementById('fx');
+let fxEnabled=new URLSearchParams(location.search).get('fx')!=='off';
+const composer=new EffectComposer(renderer,new THREE.WebGLRenderTarget(vw,vh,{samples:4,type:THREE.HalfFloatType}));
+composer.setPixelRatio(renderPixelRatio);composer.setSize(vw,vh);
+composer.addPass(new RenderPass(scene,camera));
+// P4 环境光遮蔽：GTAO 在线性 HDR 域、bloom 之前工作，给巷道/楼脚/设备
+// 缝隙加接触面暗部。半径按城市尺度（楼 6-64 单位、街区 42 单位）取 2。
+// 注：路线里的「屏幕空间神光」在此降范围——遮挡 prepass 会让全场景
+// 绘制提交翻倍（CPU 反噬），探照灯已有解析式体积光锥承担该观感。
+const gtaoPass=new GTAOPass(scene,camera,innerWidth,innerHeight);
+// radius 1.2 / blend .6：城市尺度下更大的半径会在深度断点（楼体轮廓对
+// 远景）渗出大块半透明暗晕——用户看到的"黑色遮罩片"。收紧到贴脚尺度。
+gtaoPass.updateGtaoMaterial({radius:1.2,distanceExponent:2,thickness:1,scale:1.1,samples:16,distanceFallOff:1,screenSpaceRadius:false});
+gtaoPass.blendIntensity=.6;
+const aoButton=document.getElementById('ao');
+function setAO(enabled){
+ gtaoPass.enabled=enabled!==false;
+ if(aoButton){aoButton.textContent='遮蔽 · '+(gtaoPass.enabled?'开':'关');aoButton.setAttribute('aria-pressed',String(gtaoPass.enabled));}
+}
+setAO(new URLSearchParams(location.search).get('ao')!=='off');
+aoButton.onclick=()=>setAO(!gtaoPass.enabled);
+composer.addPass(gtaoPass);
+const bloomPass=new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight),.62,.35,.82);
+composer.addPass(bloomPass);composer.addPass(new OutputPass());
+// 电影感分级：OutputPass 完成色调映射与 sRGB 后，在显示域做轻量分级——
+// 柔和 S 曲线给足对比、暗部微冷/高光微暖的 split-tone、四角暗角、
+// 每像素抖动消除暗部色带。量级全部收敛在"态度"而非"滤镜"。
+const gradePass=new ShaderPass({
+ uniforms:{tDiffuse:{value:null},uVignette:{value:.14}},
+ vertexShader:`varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+ fragmentShader:`uniform sampler2D tDiffuse;uniform float uVignette;varying vec2 vUv;
+  float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+  void main(){
+   vec3 c=texture2D(tDiffuse,vUv).rgb;
+   c=mix(c,c*c*(3.-2.*c),.18);
+   float l=dot(c,vec3(.2126,.7152,.0722));
+   c+=vec3(-.010,.003,.012)*(1.-smoothstep(0.,.55,l));
+   c+=vec3(.024,.010,-.012)*smoothstep(.55,1.,l);
+   vec2 q=vUv-.5;c*=1.-uVignette*dot(q,q)*2.2;
+   c+=(hash(vUv*vec2(1920.,1080.))-.5)/255.;
+   gl_FragColor=vec4(clamp(c,0.,1.),1.);
+  }`});
+gradePass.enabled=new URLSearchParams(location.search).get('grade')!=='off';
+composer.addPass(gradePass);
+function setPostFX(enabled){
+ fxEnabled=enabled!==false;
+ if(fxButton){fxButton.textContent='辉光 · '+(fxEnabled?'开':'关');fxButton.setAttribute('aria-pressed',String(fxEnabled));}
+}
+setPostFX(fxEnabled);
+fxButton.onclick=()=>setPostFX(!fxEnabled);
+// P2 环境光照：用项目自己的夜空（渐变穹顶 + 地平霓虹带 + 星月）离线生成
+// PMREM 环境贴图，金属外墙与湿路的反射内容因此与画面里的天空一致，而
+// 不是默认的纯黑。穹顶平时跟随相机，捕获前把克隆归零到原点；远裁剪面
+// 必须盖过穹顶半径 480，否则星月全被 PMREM 默认 far=100 裁掉。
+const iblButton=document.getElementById('ibl');
+let envTexture=null;
+if(new URLSearchParams(location.search).get('ibl')!=='off'){
+ const pmrem=new THREE.PMREMGenerator(renderer);
+ const envScene=new THREE.Scene();
+ const skyForEnv=sky.clone();skyForEnv.position.set(0,0,0);
+ envScene.add(skyForEnv);
+ envTexture=pmrem.fromScene(envScene,0,.1,1000).texture;
+ scene.environment=envTexture;
+ pmrem.dispose();
+}
+function setIBL(enabled){
+ scene.environment=enabled&&envTexture?envTexture:null;
+ if(iblButton){iblButton.textContent='反射 · '+(scene.environment?'开':'关');iblButton.setAttribute('aria-pressed',String(!!scene.environment));}
+}
+setIBL(!!envTexture);
+iblButton.onclick=()=>setIBL(!scene.environment);
+const block=makeCyberBlock({seed:2049});scene.add(block);const flyers=Array.from({length:4},(_,lane)=>makeFlyer({lane}));// Six sector couriers circle above their own rooftops; four express lanes cross the whole sky.
+const skyFleet=[
+ {lane:4,color:'#39baff',center:[-42,-48],radius:22,zRadius:30,height:17,speed:.12,phase:2.3,wobble:1.4,scale:1.15},
+ {lane:5,color:'#47e0f1',center:[0,-48],radius:24,zRadius:30,height:39,speed:.105,phase:2.2,wobble:1.5,scale:1.15},
+ {lane:6,color:'#ff4dce',center:[42,0],radius:26,zRadius:34,height:31,speed:.1,phase:1.2,wobble:1.8,scale:1.25},
+ {lane:7,color:'#ff7256',center:[-42,48],radius:24,zRadius:32,height:16,speed:.125,phase:3.1,wobble:1.3,scale:1.1},
+ {lane:8,color:'#ffe6b1',center:[0,48],radius:28,zRadius:36,height:25,speed:.095,phase:5,wobble:1.6,scale:1.2},
+ {lane:9,color:'#ff9ad4',center:[42,48],radius:25,zRadius:33,height:23,speed:.115,phase:.4,wobble:1.4,scale:1.1},
+ {lane:10,color:'#7cffc4',radius:52,zRadius:66,height:40,speed:.07,phase:.8,wobble:2.6,scale:1.5},
+ {lane:11,color:'#8fb7ff',radius:68,zRadius:88,height:52,speed:.055,phase:2.5,wobble:3.2,scale:1.7},
+ {lane:12,color:'#40f0fa',radius:84,zRadius:104,height:74,speed:.045,phase:4.4,wobble:3.8,scale:1.9},
+ {lane:13,color:'#ffd166',radius:44,zRadius:58,height:62,speed:.085,phase:5.7,wobble:2.2,scale:1.5},
+];
+flyers.push(...skyFleet.map(options=>makeFlyer(options)));flyers.forEach(f=>scene.add(f));
+// Neon motorcycles thread the老街 in the curb lane at 2.95, keeping clear of the
+// 2-unit car lanes, the parked cars at 3.95 and the 4.52 pedestrian line.
+const streetRiders=makeNeonRiders({seed:2049,routes:[-2.95,2.95].map(offset=>({
+ axis:'z',offset,direction:offset<0?1:-1,low:-34,length:68,fade:5,speed:2.35,count:2,spacing:34,
+}))});scene.add(streetRiders);
+// Two idle sentries sweep the老街 pavement, clear of the 4.52 walking line and
+// of the bollards at 5.31 and the utility cabinets at 5.84.
+const streetRobots=makeStreetRobots({seed:2049,statics:[
+ {x:-5.9,z:4.2,yaw:Math.PI/2},{x:5.9,z:-4.2,yaw:-Math.PI/2},
+]});scene.add(streetRobots);
+const district=createDistrict({block,seed:2049,gpuCrowd:new URLSearchParams(location.search).get('cpu-crowd')!=='1'});scene.add(district);
+// r160 没有场景级 environmentIntensity：布料/混凝土这类高粗糙度非金属会被
+// 环境辐照整体提亮、在暗街上发灰。城市建成后逐材质收敛它们的
+// envMapIntensity；金属与玻璃（metalness>=.4）保持 1，保留天空反射的体积感。
+if(envTexture)scene.traverse(object=>{
+ const materials=Array.isArray(object.material)?object.material:object.material?[object.material]:[];
+ for(const material of materials)
+  if(material.isMeshStandardMaterial&&material.roughness>.7&&material.metalness<.3)
+   material.envMapIntensity=.45;
+});
+// P3 选择性阴影：只有主楼群/地标/总部投射并接收（楼间相互投影给出街谷
+// 层次），人行道与街道静态批次接收；行人/车队/雨/倒影组一律不参与。
+// 楼群静止，贴图渲一次后冻结——运行时零阴影 pass 成本。
+const shadowButton=document.getElementById('shadows');
+function setShadows(enabled){
+ rim.castShadow=enabled!==false;
+ if(rim.castShadow)renderer.shadowMap.needsUpdate=true;
+ if(shadowButton){shadowButton.textContent='阴影 · '+(rim.castShadow?'开':'关');shadowButton.setAttribute('aria-pressed',String(rim.castShadow));}
+}
+setShadows(new URLSearchParams(location.search).get('shadows')!=='off');
+const shadowBuildings=object=>object.traverse(node=>{
+ if(node.isMesh&&!node.material.isMeshBasicMaterial)node.castShadow=node.receiveShadow=true;
+});
+shadowBuildings(block.getObjectByName('Architecture'));
+shadowBuildings(district.userData.architecture);
+shadowBuildings(district.userData.headquarters);
+shadowBuildings(district.userData.landmarks);
+// 磁浮列车在动，投进静态贴图会冻结成悬空影子，单独关掉。
+district.userData.landmarks.userData.train.traverse(node=>{if(node.isMesh)node.castShadow=false;});
+block.getObjectByName('Sidewalks').traverse(node=>{if(node.isMesh)node.receiveShadow=true;});
+district.userData.streets.traverse(node=>{if(node.isMesh&&node.name==='DistrictStreetBatch')node.receiveShadow=true;});
+document.getElementById('district-stats').textContent='09 SECTORS · '+district.userData.buildingCount+' BUILDINGS';
+const sceneClock={seconds:12,paused:reduceMotion,epochWall:performance.now()/1000,epochSeconds:12};
+function updateSceneClock(now){if(!sceneClock.paused)sceneClock.seconds=sceneClock.epochSeconds+now-sceneClock.epochWall;return sceneClock.seconds;}
+function resetSceneClock(now=performance.now()/1000){sceneClock.epochSeconds=sceneClock.seconds;sceneClock.epochWall=now;}
+window.makeCyberBlock=makeCyberBlock;window.makeFlyer=makeFlyer;
+const keyboardNavigation=createKeyboardNavigation({camera,controls,domElement:renderer.domElement,bounds:{minX:-600,maxX:600,minY:.45,maxY:420,minZ:-600,maxZ:600},onMove(){controls.autoRotate=false;resetCameraOrbit();syncControls();}});
+let view='overview',selectedSector=null,selectedActivity=null,portrait=vw<650;
+const districtNavigation=createDistrictNavigation({styles:district.userData.sectors,onSelect:setSectorView,onOpenChange(){keyboardNavigation.reset();}});
+const cityLifeNavigation=createCityLifeNavigation({activities:district.userData.life?.userData.activities||{},onSelect:setActivityView});
+let reviewSnapshot=null;
+const sceneReview=createSceneReview({scene,camera,controls,domElement:renderer.domElement,
+ getSceneTime:()=>sceneClock.seconds,toggleButton:document.getElementById('review-mode'),
+ onEnabledChange(enabled){
+  const now=performance.now()/1000;
+  keyboardNavigation.reset();
+  if(enabled){
+   updateSceneClock(now);updateCity(sceneClock.seconds);
+   reviewSnapshot={paused:sceneClock.paused,autoRotate:controls.autoRotate};
+   sceneClock.paused=true;controls.autoRotate=false;
+  }else if(reviewSnapshot){
+   sceneClock.paused=reviewSnapshot.paused;controls.autoRotate=reviewSnapshot.autoRotate;reviewSnapshot=null;
+  }
+  document.getElementById('pause').disabled=enabled;
+  document.getElementById('rotate').disabled=enabled;
+  resetSceneClock(now);resetCameraOrbit(now);syncControls();
+ }
+});
+document.addEventListener('focusin',event=>{if(event.target.closest?.('.district-navigation, .city-life-navigation, .scene-review'))keyboardNavigation.reset();});
+const characterDetailGroups=[district.userData.reflection,...(district.userData.life?[district.userData.life]:[]),district.userData.architecture,district.userData.landmarks,district.userData.airships,district.userData.skyTraffic,district.userData.buses,district.userData.skyway,district.getObjectByName('DistrictHorizon'),...flyers,district.userData.streets,streetRiders,streetRobots,...['riders','robots','bipeds','bikes','leapers'].map(key=>district.userData[key])];
+function prepareCharacterDetails(){for(const group of characterDetailGroups)group.userData.prepareView?.(camera);}
+window.__asset={scene,camera,renderer,controls,block,district,flyers,streetRiders,streetRobots,cameraOrbit,resetCameraOrbit,updateCameraOrbit,sceneClock,updateSceneClock,keyboardNavigation,districtNavigation,cityLifeNavigation,sceneReview,setView,setSectorView,setActivityView,setSceneTime,prepareCharacterDetails,composer,bloomPass,gtaoPass,gradePass,setPostFX,setIBL,envTexture:()=>envTexture,setShadows,setAO};
+function syncControls(){
+ document.querySelectorAll('.views button').forEach(b=>{if(b.id==='rotate')return;b.classList.toggle('active',b.id===view);b.setAttribute('aria-pressed',String(b.id===view));});
+ document.getElementById('rotate').textContent='巡航 · '+(controls.autoRotate?'开':'关');document.getElementById('rotate').setAttribute('aria-pressed',String(controls.autoRotate));
+ document.getElementById('pause').textContent='时间 · '+(sceneClock.paused?'静止':'流动');document.getElementById('pause').setAttribute('aria-pressed',String(sceneClock.paused));
+ districtNavigation.setActive(selectedSector);
+ cityLifeNavigation.setActive(selectedActivity);cityLifeNavigation.update(sceneClock.paused);
+}
+function frameOverview(){
+ controls.target.set(-2,38,-35);
+ const direction=new THREE.Vector3(91,71,182).normalize(),right=new THREE.Vector3(direction.z,0,-direction.x).normalize(),up=new THREE.Vector3().crossVectors(direction,right),relative=new THREE.Vector3();
+ const tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov/2)),tanH=tanV*camera.aspect;
+ let distance=215;
+ for(const point of [...district.userData.viewPoints,...district.userData.headquarters.userData.framingPoints]){relative.copy(point).sub(controls.target);const depth=relative.dot(direction),y=relative.dot(up);distance=Math.max(distance,depth+Math.abs(relative.dot(right))/(tanH*.94),depth+Math.abs(y)/(tanV*.80));}
+ camera.position.copy(controls.target).addScaledVector(direction,distance*1.035);
+ scene.fog.density=.0034*Math.min(1,220/distance);
+}
+function frameSector(sector){
+ controls.target.set(sector.cx,sector.maxHeight*.30,sector.cz);
+ const direction=new THREE.Vector3(20,26,32).normalize(),right=new THREE.Vector3(direction.z,0,-direction.x).normalize(),up=new THREE.Vector3().crossVectors(direction,right),relative=new THREE.Vector3();
+ const tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov/2)),tanH=tanV*camera.aspect;
+ let distance=38;
+ for(const point of sector.viewPoints){relative.copy(point).sub(controls.target);const depth=relative.dot(direction);distance=Math.max(distance,depth+Math.abs(relative.dot(right))/(tanH*.82),depth+Math.abs(relative.dot(up))/(tanV*.72));}
+ camera.position.copy(controls.target).addScaledVector(direction,distance*1.04);
+ scene.fog.density=.0055*Math.min(1,70/distance);
+}
+function setSectorView(id){
+ const sector=district.userData.sectors.find(item=>item.id===id);if(!sector)return;selectedActivity=null;
+ if(sector.preset)setView(sector.preset);
+ else{keyboardNavigation.reset();view='sector';selectedSector=id;portrait=innerWidth<650;controls.autoRotate=false;frameSector(sector);updateControls();resetCameraOrbit();syncControls();}
+ renderer.domElement.focus({preventScroll:true});
+}
+function setView(which){keyboardNavigation.reset();selectedActivity=null;view=which;selectedSector=which==='street'?'center':which==='skyline'?'northeast':null;portrait=innerWidth<650;scene.fog.density=which==='street'?.0055:.0030;
+ if(which==='overview'){frameOverview();controls.autoRotate=!reduceMotion&&!sceneReview.enabled;}
+ else if(which==='headquarters'||which==='skyway'){
+  const subject=district.userData[which],bookmark=subject.userData.view;
+  camera.position.fromArray(bookmark.camera);controls.target.fromArray(bookmark.target);
+  if(portrait){const direction=camera.position.clone().sub(controls.target).normalize();const span=which==='headquarters'?88:180;const distance=Math.max(camera.position.distanceTo(controls.target),span/(2*Math.tan(THREE.MathUtils.degToRad(camera.fov/2))*camera.aspect));camera.position.copy(controls.target).addScaledVector(direction,distance);}
+  controls.autoRotate=false;scene.fog.density=.0026;
+ }
+ else if(which==='skyline'){camera.position.set(portrait?86:83,portrait?48:44,portrait?25:20);controls.target.set(42,29,-60);controls.autoRotate=false;}
+ else{camera.position.set(.4,2.25,23.5);controls.target.set(-.45,5.4,-12);controls.autoRotate=false;}
+ updateControls();resetCameraOrbit();syncControls();
+}
+const activityFrameCache=new Map();
+function frameActivity(id){
+ const activity=district.userData.life?.userData.activities[id],bookmark=activity?.userData.view;if(!bookmark)return;
+ const narrow=innerWidth<650,mobile=narrow&&bookmark.mobileCamera;
+ controls.target.fromArray(mobile?bookmark.mobileTarget||bookmark.target:bookmark.target);
+ camera.position.fromArray(mobile?bookmark.mobileCamera:bookmark.camera);
+ if(narrow&&!mobile){
+  let bounds=activityFrameCache.get(id);
+  if(!bounds){
+   bounds=new THREE.Box3();const u=activity.userData,period=u.cycleDuration||u.actorPeriod||u.timetable?.cycle||224;
+   for(let step=0;step<=64;step++)for(const index of u.actorIndices){const p=u.samplePerson(index,step*period/64);if(!p||p.visible===false)continue;
+    bounds.expandByPoint(new THREE.Vector3(p.x-.25,p.y,p.z-.25));bounds.expandByPoint(new THREE.Vector3(p.x+.25,p.y+1.35,p.z+.25));
+   }
+   activityFrameCache.set(id,bounds);
+  }
+  const direction=camera.position.clone().sub(controls.target).normalize(),right=new THREE.Vector3(direction.z,0,-direction.x).normalize(),up=new THREE.Vector3().crossVectors(direction,right);
+  const tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov/2)),tanH=tanV*camera.aspect;let distance=camera.position.distanceTo(controls.target);
+  for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){
+   const relative=new THREE.Vector3(x,y,z).sub(controls.target),depth=relative.dot(direction);
+   distance=Math.max(distance,depth+Math.abs(relative.dot(right))/(tanH*.82),depth+Math.abs(relative.dot(up))/(tanV*.70));
+  }
+  camera.position.copy(controls.target).addScaledVector(direction,distance*1.02);
+ }
+ scene.fog.density=.006;camera.lookAt(controls.target);
+}
+function setActivityView(id){
+ if(!district.userData.life?.userData.activities[id])return;
+ keyboardNavigation.reset();view='activity';selectedActivity=id;selectedSector=null;portrait=innerWidth<650;
+ controls.autoRotate=false;frameActivity(id);updateControls();resetCameraOrbit();syncControls();
+ renderer.domElement.focus({preventScroll:true});
+}
+function updateCity(seconds){
+ block.userData.update(seconds);district.userData.update(seconds);streetRiders.userData.update(seconds);streetRobots.userData.update(seconds);flyers.forEach(f=>f.userData.update(seconds));
+ cityLifeNavigation.update(sceneClock.paused);
+}
+function setSceneTime(seconds){
+ if(!Number.isFinite(seconds))return;
+ sceneClock.seconds=Math.max(0,seconds);resetSceneClock();updateCity(sceneClock.seconds);
+}
+document.getElementById('overview').onclick=()=>setView('overview');document.getElementById('street').onclick=()=>setView('street');
+document.getElementById('skyline').onclick=()=>setView('skyline');
+document.getElementById('headquarters').onclick=()=>setView('headquarters');document.getElementById('skyway').onclick=()=>setView('skyway');
+function toggleCruise(){controls.autoRotate=!controls.autoRotate;resetCameraOrbit();syncControls();}
+function togglePause(){const now=performance.now()/1000;updateSceneClock(now);sceneClock.paused=!sceneClock.paused;resetSceneClock(now);resetCameraOrbit(now);syncControls();}
+document.getElementById('rotate').onclick=toggleCruise;
+document.getElementById('pause').onclick=togglePause;
+// —— 全屏观景：F / 按钮，fullscreenchange 回填文案 ——
+const fullscreenButton=document.getElementById('fullscreen');let fullscreenPending=false;
+function syncFullscreen(){const active=Boolean(document.fullscreenElement);fullscreenButton.textContent=active?'退出全屏':'全屏';fullscreenButton.setAttribute('aria-pressed',String(active));}
+async function toggleFullscreen(){
+ if(fullscreenPending)return;fullscreenPending=true;
+ try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}
+ catch(_){/* 全屏被拒（嵌入框架未授权等）时保持窗口观景 */}
+ finally{fullscreenPending=false;}
+}
+fullscreenButton.onclick=toggleFullscreen;document.addEventListener('fullscreenchange',syncFullscreen);
+// —— 隐藏界面观景：H / 按钮，Esc 或右上角「界面 ×」恢复 ——
+const uiToggleButton=document.getElementById('ui-toggle'),showUIButton=document.getElementById('show-ui');
+const uiHidden=()=>document.body.classList.contains('ui-hidden');
+function setUIHidden(hidden){
+ document.body.classList.toggle('ui-hidden',hidden);
+ uiToggleButton.setAttribute('aria-pressed',String(hidden));
+ showUIButton.hidden=!hidden;
+ if(hidden)districtNavigation.close();
+}
+uiToggleButton.onclick=()=>setUIHidden(!uiHidden());
+showUIButton.onclick=()=>{setUIHidden(false);uiToggleButton.focus({preventScroll:true});};
+// —— 键位说明面板：桌面展开、触屏收起，收展状态记忆 ——
+const hint=document.getElementById('keys-hint'),hintToggle=document.getElementById('keys-hint-toggle');
+function setHintCollapsed(collapsed){hint.classList.toggle('collapsed',collapsed);hintToggle.setAttribute('aria-expanded',String(!collapsed));hintToggle.textContent=collapsed?'展开':'收起';try{localStorage.setItem('cyber-city-keys-hint',collapsed?'1':'0');}catch(_){/* 隐私模式下静默 */}}
+try{const saved=localStorage.getItem('cyber-city-keys-hint');setHintCollapsed(saved===null?matchMedia('(pointer:coarse)').matches:saved==='1');}catch(_){setHintCollapsed(matchMedia('(pointer:coarse)').matches);}
+hintToggle.onclick=()=>setHintCollapsed(!hint.classList.contains('collapsed'));
+// —— 单发快捷键：1-5 换景 · 空格 暂停 · C 巡航 · R 全景 · F 全屏 · H 隐界面 ——
+const viewShortcuts={Digit1:'overview',Digit2:'street',Digit3:'skyline',Digit4:'headquarters',Digit5:'skyway',Numpad1:'overview',Numpad2:'street',Numpad3:'skyline',Numpad4:'headquarters',Numpad5:'skyway'};
+document.addEventListener('keydown',event=>{
+ if(event.repeat||event.ctrlKey||event.metaKey||event.altKey||event.isComposing||event.keyCode===229)return;
+ if(event.target.closest?.('button, a, input, select, textarea, [contenteditable]'))return;
+ const viewId=viewShortcuts[event.code];
+ if(viewId){setView(viewId);return;}
+ switch(event.code){
+  case 'Space':event.preventDefault();togglePause();break;
+  case 'KeyC':toggleCruise();break;
+  case 'KeyR':setView('overview');break;
+  case 'KeyF':toggleFullscreen();break;
+  case 'KeyH':setUIHidden(!uiHidden());break;
+ }
+ // 全屏中的 Esc 交给浏览器退全屏；审阅/九区导览开启时由各自监听优先处理。
+ if(event.key==='Escape'&&uiHidden()&&!sceneReview.enabled&&!document.fullscreenElement&&!districtNavigation.isOpen())setUIHidden(false);
+});
+let weatherIndex=0;const weather=[{label:'微雨',status:'LIGHT RAIN',intensity:.65},{label:'骤雨',status:'HEAVY RAIN',intensity:1},{label:'停雨',status:'AFTER THE RAIN',intensity:0}];
+document.getElementById('rain').onclick=()=>{weatherIndex=(weatherIndex+1)%weather.length;const state=weather[weatherIndex];block.userData.atmosphere.userData.setIntensity(state.intensity);district.userData.weather.userData.setIntensity(state.intensity);document.getElementById('rain').textContent='雨势 · '+state.label;document.getElementById('weather-status').textContent='23:48 / '+state.status;};
+addEventListener('resize',()=>{const changed=(innerWidth<650)!==portrait;camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);composer.setSize(innerWidth,innerHeight);gtaoPass.setSize(innerWidth,innerHeight);bloomPass.setSize(innerWidth,innerHeight);if(view==='activity'){frameActivity(selectedActivity);portrait=innerWidth<650;updateControls();resetCameraOrbit();}else if(view==='sector'){frameSector(district.userData.sectors.find(item=>item.id===selectedSector));portrait=innerWidth<650;updateControls();resetCameraOrbit();}else if(changed||['overview','headquarters','skyway'].includes(view)){const cruise=controls.autoRotate;setView(view);controls.autoRotate=cruise;syncControls();}});
+document.addEventListener('visibilitychange',()=>{resetSceneClock();resetCameraOrbit();});
+// 布局就位前持续自愈（最多 36s）：拿到首个真实尺寸后派发一次 resize，
+// 让上面的 resize 处理器重算 aspect/尺寸/构图；恢复可见时同理兜底
+(function healLayout(n){if(!layoutWasZero)return;if(innerWidth&&innerHeight){layoutWasZero=false;dispatchEvent(new Event('resize'));return}if(n>0)setTimeout(()=>healLayout(n-1),600)})(60);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&layoutWasZero&&innerWidth&&innerHeight){layoutWasZero=false;dispatchEvent(new Event('resize'))}});
+setView(['street','skyline','headquarters','skyway'].includes(new URLSearchParams(location.search).get('view'))?new URLSearchParams(location.search).get('view'):'overview');
+const requestedActivity=new URLSearchParams(location.search).get('activity');if(requestedActivity)setActivityView(requestedActivity);
+updateCity(sceneClock.seconds);
+/* 操作模式套件：环绕（原生） / 键鼠第一人称（Pointer Lock 转向，WASD/QE 复用 keyboardNavigation 且跟随视线） / 轮盘（摇杆合成 WASD）。 */
+const controlsMount=document.createElement('div');
+controlsMount.className='tcs-mount';
+controlsMount.style.cssText='position:fixed;inset:0;z-index:5';
+document.body.appendChild(controlsMount);
+const lookAngles={yaw:null,pitch:null};
+function initLookAngles(){if(lookAngles.yaw!==null)return;const dir=new THREE.Vector3();camera.getWorldDirection(dir);lookAngles.yaw=Math.atan2(-dir.x,-dir.z);lookAngles.pitch=Math.asin(THREE.MathUtils.clamp(dir.y,-1,1));}
+function applyLook(){initLookAngles();const cp=Math.cos(lookAngles.pitch);camera.lookAt(camera.position.x-Math.sin(lookAngles.yaw)*cp,camera.position.y+Math.sin(lookAngles.pitch),camera.position.z-Math.cos(lookAngles.yaw)*cp);const dir=new THREE.Vector3();camera.getWorldDirection(dir);controls.target.copy(camera.position).addScaledVector(dir,10);}
+let synthKeys=new Set();
+function syncSynthKeys(v){const want=new Set();if(v.x>.35)want.add('KeyD');if(v.x<-.35)want.add('KeyA');if(v.y>.35)want.add('KeyW');if(v.y<-.35)want.add('KeyS');synthKeys.forEach(c=>{if(!want.has(c))document.dispatchEvent(new KeyboardEvent('keyup',{code:c,bubbles:true}));});want.forEach(c=>{if(!synthKeys.has(c))document.dispatchEvent(new KeyboardEvent('keydown',{code:c,bubbles:true}));});synthKeys=want;}
+TownControlsSuite.mount({
+  mount: controlsMount,
+  storageKey: 'cyber-city-controls',
+  modes: ['orbit','fps','moba'],
+  hints: {
+    orbit: [['W A S D','平移漫游'],['Q / E','下降 · 上升'],['Shift','加速'],['1 - 5','切换机位'],['空格','时间暂停'],['C','巡航开关'],['R','回全景'],['F','全屏'],['H','隐藏界面'],['单指拖动','旋转视角'],['双指捏合','缩放']],
+    fps: [['点击画面','锁定鼠标'],['鼠标移动','转视角'],['W A S D','平移漫游'],['Q / E','下降 · 上升'],['Shift','加速'],['Esc','释放鼠标']],
+    moba: [['左下摇杆','平移漫游'],['滑动画布','旋转视角'],['双指捏合','缩放']]
+  },
+  onModeChange(m){
+    lookAngles.yaw=null;
+    if(m==='fps'){controls.enabled=false;controls.autoRotate=false;}
+    else{controls.enabled=true;}
+  },
+  fps: { target: renderer.domElement, onLook(dyaw,dpitch){ initLookAngles(); lookAngles.yaw+=dyaw; lookAngles.pitch=THREE.MathUtils.clamp(lookAngles.pitch+dpitch,-1.45,1.45); applyLook(); } },
+  moba: { onMove: syncSynthKeys }
+});
+function animate(){requestAnimationFrame(animate);if(document.hidden)return;const now=performance.now()/1000,seconds=updateSceneClock(now);keyboardNavigation.update(now);
+// While paused every subsystem would recompute identical values from the same
+// absolute second; skipping them keeps a paused scene (and the reduced-motion
+// default) at near-idle CPU while the camera stays fully interactive.
+if(!sceneClock.paused)updateCity(seconds);
+if(sceneClock.paused){updateControls();resetCameraOrbit(now);}else updateCameraOrbit(now);sky.position.copy(camera.position);prepareCharacterDetails();if(fxEnabled)composer.render();else renderer.render(scene,camera);sceneReview.update();}
+animate();
+</script></body></html>

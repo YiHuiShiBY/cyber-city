@@ -1,0 +1,27 @@
+.city-life-navigation {
+  position: fixed; z-index: 3; top: 122px; right: var(--edge);
+  width: 290px; padding: 12px; color: #d3e8e7;
+  border: 1px solid rgb(131 190 198 / 22%); background: rgb(5 17 27 / 85%);
+  backdrop-filter: blur(10px); box-sizing: border-box;
+}
+.city-life-navigation__heading { margin-bottom: 9px; font-size: 10px; letter-spacing: 2px; color: #92b4bd; }
+.city-life-navigation__choices { display: flex; gap: 5px; }
+.city-life-navigation__choices button {
+  flex: 1; min-height: 33px; padding: 0 6px; font-size: 11px; letter-spacing: .4px;
+  border: 1px solid rgb(117 177 190 / 22%); color: #bfdbdd; background: #0e2531;
+}
+.city-life-navigation__choices button.active { color: #fff0ca; border-color: #b88e53; background: #44372b; }
+.city-life-navigation__status { margin-top: 11px; padding-top: 10px; border-top: 1px solid #25404b; }
+.city-life-navigation__status strong { display: block; font-size: 12px; font-weight: 500; color: #f5dba6; }
+.city-life-navigation__status span { display: block; margin-top: 5px; font-size: 10px; line-height: 1.7; color: #a3c0c7; }
+.city-life-navigation [hidden] { display: none; }
+@media (max-width: 650px) {
+  .city-life-navigation { top: 138px; left: var(--edge); right: var(--edge); width: auto; padding: 9px; }
+  .city-life-navigation__heading { display: none; }
+  .city-life-navigation__status { margin-top: 7px; padding-top: 7px; }
+  .city-life-navigation__status span { font-size: 9px; }
+}
+@media (max-height: 530px) {
+  .city-life-navigation { top: 105px; padding: 8px; }
+  .city-life-navigation__heading, .city-life-navigation__status span { display: none; }
+}

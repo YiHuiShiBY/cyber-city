@@ -1,0 +1,39 @@
+/* The six camera choices form two rows on narrow screens. Keep the existing
+   district and weather controls above that taller bar. */
+.weather { max-width: calc(100vw - 2 * var(--edge)); flex-wrap: wrap; justify-content: flex-end; }
+.weather button:disabled, #rotate:disabled { opacity: .5; cursor: default; }
+#review-mode[aria-pressed="true"] { color: #ffd0a1; background: rgb(244 152 79 / 13%); }
+@media (min-width: 651px) and (max-width: 1150px) {
+  .views button { padding: 0 10px; font-size: 10px; }
+  .caption { max-width: 245px; font-size: 7px; letter-spacing: .6px; }
+}
+/* 八个按钮与说明文字在这一档会挤到换行：收紧内距让镜头排保持单行 */
+@media (min-width: 1151px) and (max-width: 1360px) {
+  .views button { padding: 0 13px; }
+  #fullscreen, #ui-toggle { padding: 0 11px; }
+  .caption { max-width: 330px; }
+}
+@media (max-width: 650px) {
+  .views { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2px; }
+  .views button { width: 100%; min-height: 38px; padding: 0 3px; font-size: 9px; }
+  #rotate, #fullscreen, #ui-toggle { margin-left: 0; border-left: 0; }
+  /* 第八个按钮跨两格，补齐三行网格的最后一行 */
+  #ui-toggle { grid-column: span 2; }
+  .weather, .district-navigation { bottom: calc(var(--bottom,19px) + 193px); }
+  .weather { bottom: calc(var(--bottom,19px) + 242px); }
+}
+@media (max-height: 530px) and (min-width: 651px) {
+  .panel .caption { display: none; }
+  .panel .views { width: 100%; }
+  .views button { flex: 1; padding: 0 8px; }
+}
+@media (max-height: 530px) and (max-width: 650px) {
+  .views button { min-height: 31px; }
+  .weather, .district-navigation { bottom: calc(var(--bottom,10px) + 112px); }
+  .weather { bottom: calc(var(--bottom,10px) + 152px); }
+}
+@media (min-width: 651px) and (max-width: 1050px) {
+  .panel .caption { display: none; }
+  .panel .views { width: 100%; }
+  .views button { flex: 1; }
+}

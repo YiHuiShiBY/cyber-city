@@ -1,0 +1,167 @@
+.district-navigation {
+  position: fixed;
+  z-index: 4;
+  bottom: calc(var(--bottom, 28px) + 88px);
+  left: max(var(--edge, 24px), env(safe-area-inset-left));
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+.district-navigation [hidden] { display: none !important; }
+
+.district-navigation__opener {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 1px solid rgb(137 190 203 / 25%);
+  border-radius: 3px;
+  background: rgb(5 16 29 / 88%);
+  box-shadow: 0 5px 24px rgb(0 3 14 / 20%);
+  color: #d4eceb;
+  font-size: 11px;
+  letter-spacing: .6px;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.district-navigation__opener[aria-expanded="true"] {
+  border-color: rgb(130 228 220 / 60%);
+  background: #10252f;
+}
+
+.district-navigation__icon {
+  display: grid;
+  width: 13px;
+  height: 13px;
+  flex: 0 0 13px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.district-navigation__icon i { background: #82e4dc; opacity: .6; }
+.district-navigation__icon i:nth-child(5) { opacity: 1; }
+.district-navigation__current { color: #a5c2c7; font-size: 10px; letter-spacing: .1px; }
+
+.district-navigation__popover {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  width: 270px;
+  max-width: calc(100vw - 2 * var(--edge, 24px));
+  padding: 10px;
+  border: 1px solid rgb(145 207 212 / 35%);
+  border-radius: 5px;
+  background: rgb(5 15 27 / 97%);
+  box-shadow: 0 12px 38px rgb(0 3 12 / 45%), inset 0 1px rgb(218 255 253 / 5%);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+}
+
+.district-navigation__header {
+  display: flex;
+  min-height: 22px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+.district-navigation__header h2 {
+  margin: 0;
+  color: #d5e9ec;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.district-navigation__north {
+  color: #91c8c7;
+  font: 9px/1.5 "Cascadia Code", Consolas, monospace;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.district-navigation__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.district-navigation__district {
+  display: flex;
+  min-width: 0;
+  min-height: 72px;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px 6px;
+  border: 1px solid rgb(125 165 181 / 19%);
+  border-radius: 2px;
+  background: rgb(29 48 64 / 38%);
+  color: #e2ecee;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: normal;
+}
+
+.district-navigation__colors {
+  display: block;
+  height: 2px;
+  flex: 0 0 2px;
+  background: linear-gradient(90deg, var(--district-primary) 0 68%, var(--district-secondary) 68% 100%);
+  opacity: .85;
+}
+
+.district-navigation__name { color: var(--district-primary); font-size: 11px; line-height: 1.4; white-space: nowrap; }
+.district-navigation__subtitle { color: #aebfca; font-size: 9px; line-height: 1.45; overflow-wrap: anywhere; }
+
+.district-navigation__district.is-active {
+  border-color: var(--district-primary);
+  background: rgb(78 109 123 / 24%);
+  box-shadow: inset 0 0 0 1px rgb(223 255 255 / 5%);
+}
+
+.district-navigation button:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid #c4fff4;
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .district-navigation__opener:hover { background: #142a34; color: #efffff; }
+  .district-navigation__district:hover { border-color: var(--district-primary); background: #203342; }
+}
+
+@media (max-width: 650px) {
+  .district-navigation { bottom: calc(var(--bottom, 19px) + 118px); }
+  .district-navigation__popover { width: 300px; }
+  .district-navigation__opener { gap: 7px; padding: 0 10px; font-size: 10px; }
+  .district-navigation__current { display: none; }
+}
+
+@media (max-height: 530px) {
+  .district-navigation__popover {
+    position: fixed;
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    max-height: calc(100dvh - 24px);
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+  }
+  .district-navigation__header { min-height: 20px; margin-bottom: 7px; }
+  .district-navigation__district { min-height: 66px; gap: 4px; padding-top: 6px; padding-bottom: 6px; }
+}
+
+@media (max-height: 530px) and (min-width: 651px) {
+  .district-navigation { bottom: calc(var(--bottom, 16px) + 71px); }
+}
+
+@media (max-height: 530px) and (max-width: 650px) {
+  .district-navigation { bottom: calc(var(--bottom, 10px) + 78px); }
+}
